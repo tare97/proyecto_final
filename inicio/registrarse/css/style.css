@@ -9,7 +9,7 @@ body{
 }
 
 h1{
-    color:white;
+    color:#fff;
     text-align: center;
 }
 
@@ -23,15 +23,15 @@ h1{
 }
 
 .form__titulo{
-    background:deepskyblue;
-    color: #fff;
+    background:#0D688F;
+    color: #DFA01B;
     padding: 20px;
     text-align:center;
     font-weight:100;
     font-size: 30px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
-    border-bottom: 5px solid crimson;
+    border-bottom: 5px solid #DFA01B;
 }
 
 .contenedor-inputs{
