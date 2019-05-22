@@ -1,19 +1,22 @@
-
-
-
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-        <title>EnjoyArt - Registro</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Título de la pestaña del navegador-->
+        <title>EnjoyArt - Registro</title>
+        
+        <!--Librerías a usar-->
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-                <link rel="stylesheet" href="css/style.css">
+        
+        <!--Enlaces propíos-->
+        <script type="text/javascript" src="js/main.js"></script>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <h1>Formulario de registro</h1>
+        <h1>EnjoyArt - Formulario de registro</h1>
         <form id="frmajax" method="POST" class="form-register">
             <h2 class="form__titulo">CREAR UNA CUENTA</h2>
             <div class="contenedor-inputs">
