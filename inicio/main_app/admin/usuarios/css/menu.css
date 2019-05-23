@@ -9,28 +9,22 @@ and open the template in the editor.
 */
 
 .navbar-global {
-  background-color: #DFA01B;
+  background-color: darkorange;
   
 }
 
 .navbar-global .navbar-brand {
-  color: #0D688F;
+  color: white;
 }
 
 .navbar .navbar-user > li > a
 {
-  color: #0D688F;
-  
-}
-
-.navbar .navbar-user > li > .salir
-{
-  color: #DF3F1B;
+  color: white;
   
 }
 
 .navbar-primary {
-  background-color: #0D688F;
+  background-color: #333;
   top: 51px;
   left: 0px;
   position: absolute;
@@ -101,7 +95,7 @@ and open the template in the editor.
 }
 
 .navbar-primary-menu li a:hover .glyphicon {
-  color: #DFA01B;
+  color: darkorange;
 }
 
 .main-content {

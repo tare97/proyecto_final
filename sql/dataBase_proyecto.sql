@@ -30,7 +30,7 @@ CREATE TABLE `publicaciones` (
   `id_usuario` int(11) COLLATE utf8_unicode_ci NOT NULL,
   `titulo` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `imagen` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `tipo_publicaciones` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `tipo_publicaciones` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `texto` varchar(10000) COLLATE utf8_unicode_ci NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -43,12 +43,11 @@ CREATE TABLE `publicaciones` (
 --
 
 CREATE TABLE `comentar` (
-  /*`id_relato` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,*/
+  `id_comentario` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,*/
   `id_publicacion` int(11) COLLATE utf8_unicode_ci NOT NULL,
   `id_usuario` int(11) COLLATE utf8_unicode_ci NOT NULL,
-  `descripcion` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
-  `imagen` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `tipo` boolean COLLATE utf8_unicode_ci NOT NULL
+  `comentario` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -75,8 +74,7 @@ CREATE TABLE `comprar` (
   `id_comprar` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `id_usuario` int(11) COLLATE utf8_unicode_ci NOT NULL,
   `id_publicacion` int(11) COLLATE utf8_unicode_ci NOT NULL,
-  `precio` int(8) COLLATE utf8_unicode_ci NOT NULL,
-  `fecha_compra` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `precio` int(8) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------

@@ -14,7 +14,7 @@ jQuery(document).on('submit','#formlg', function(event){
 		console.log(respuesta);
 		if(!respuesta.error){
 			if(respuesta.tipo === 'admin'){
-				location.href = 'main_app/admin/index.php';
+				location.href = 'main_app/admin/usuarios/masUsuario.html';
 			}else if(respuesta.tipo === 'usuario'){
 				location.href = 'main_app/usuario/index.php';
 			}
