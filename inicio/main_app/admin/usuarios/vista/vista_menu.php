@@ -26,11 +26,11 @@
         <nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="vista_menu.php">Panel de Administración</a>
+                    <a class="navbar-brand" href="vista_menu.php">Panel de Administración de Usuarios</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">USUARIOS</a></li>
-                    <li><a href="#">PUBLICACIONES</a></li>
+                    <li><a href="../../publicaciones/masPublic.html">PUBLICACIONES</a></li>
                 </ul>
                 <div id="navbar" class="collapse navbar-collapse">
                   <ul class="nav navbar-nav navbar-user navbar-right">

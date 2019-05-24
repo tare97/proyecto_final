@@ -1,1 +1,0 @@
-Python , un gusto conocerte.
