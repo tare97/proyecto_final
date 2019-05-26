@@ -1,7 +1,5 @@
 <?php
     session_start();
-    $varsesion = $_SESSION[''];
-    
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/glyphicons.css">
-	<link rel="stylesheet" type="text/css" href="../css/glyphicons.css">
+	<!--<link rel="stylesheet" type="text/css" href="../css/glyphicons.css">-->
 
 	<script type="text/javascript" src="../librerias/bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../librerias/bootstrap/js/bootstrap.min.js"></script>
@@ -41,7 +39,7 @@
         	<br>
         	<div class="row" style="margin: 0px; padding: 0px;">
 				<div class="col-lg-6 col-md-8 xs-12">
-                                    <form enctype="multipart/form-data">
+                                    <form method="POST" enctype="multipart/form-data">
                                         <h3 align="center"> Registro de datos </h3>
 					<div id="panel_registro" style="padding: 5%; box-shadow: 1px 2px 2px #A4A4A4; border:1px solid #A4A4A4;" align="center">
 						<!--Panel de datos-->

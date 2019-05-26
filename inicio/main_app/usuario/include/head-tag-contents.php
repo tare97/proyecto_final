@@ -1,0 +1,32 @@
+<?php
+    session_start();
+?>
+<title><?php echo $PAGE_TITLE ?></title>
+
+
+<?php
+
+    /* 
+    * Contiene todas las etiquetas HEAD
+    */
+    
+    if($CURRENT_PAGE == "Index"){ ?>
+        <meta name="descripcion" content="">
+        <meta name="keywords" content="">
+       
+    <?php 
+    }
+    ?>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Enlaces-->
+        <link rel="stylesheet" type="text/css" href="../usuario/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../usuario/css/glyphicons.css">
+        <link rel="stylesheet" type="text/css" href="../usuario/css/styles.css">
+        <script src="../usuario/js/jquery.min.js"></script>
+        <script src="../usuario/js/bootstrap.min.js"></script>
+        
+
+
+
+

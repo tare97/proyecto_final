@@ -20,9 +20,7 @@ function btn_guardar_dato(){
 			$("#panel_respuesta").html(data);
 			btn_listar_datos();
 
-			setTimeout(function(){
-				$("#panel_respuesta").html("");
-			},20000);
+		
 
 
 		}

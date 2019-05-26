@@ -1,0 +1,25 @@
+/* Estilos de la pagína */
+/* El cuerpo de la pagína */
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Barra de navegación */
+.navbar-inverse{
+    background: #EBA521;
+    border: 2px solid #E79918;
+}
+
+.x{
+   background:#0D688F;
+}
+
+.xa{
+   background:#0D688F;
+}
+
+.xa:hover{
+    background:red;
+}
+

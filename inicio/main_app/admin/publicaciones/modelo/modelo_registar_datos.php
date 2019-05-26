@@ -1,7 +1,7 @@
 <?php
 session_start();
+$_SESSION['id_usuario'] = $_row['id_usuario']; 
 $usuario = $_SESSION['id_usuario'];
-
 //foto
 $foto = $_FILES["foto"]["name"];
 $ruta = $_FILES["foto"]["tmp_name"];

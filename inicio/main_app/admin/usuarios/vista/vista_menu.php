@@ -1,12 +1,5 @@
 <?php
     session_start();
-    error_reporting(0);
-    $varsesion = $_SESSION['login_user'];
-    
-    if($varsesion == NULL || $versesion = ''){
-        echo 'Usted no tiene autorización';
-        die();
-    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/glyphicons.css">
-	<link rel="stylesheet" type="text/css" href="../css/glyphicons.css">
 
 	<script type="text/javascript" src="../librerias/bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../librerias/bootstrap/js/bootstrap.min.js"></script>
