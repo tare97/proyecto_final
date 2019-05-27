@@ -8,6 +8,9 @@
         <span class="icon-bar"></span>                        
       </button>
       <a class="navbar-brand" href="#">EnjoyArt Application</a>
+      <img src="../usuario/css/barra-lateral.jpg" alt="" class="menu-bar" style="width: 40px;">
+      <!--Enlace del escript para su correcto funcionamiento-->
+      <script src="../usuario/js/abrir.js"></script>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">

@@ -7,7 +7,8 @@
 	<body>
 		<?php include('include/design-top.php'); ?>
 		<?php include('include/navigation.php'); ?>
-		<div class="container" id="main-content">	
+		<div  class="main-content">	
+                        
 			<h2>Bienvenido a mi sitio web!</h2>	
 			<p>parrafo 1</p>	
 			<p>parrafo 2</p>
