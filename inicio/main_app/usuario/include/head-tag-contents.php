@@ -24,6 +24,7 @@
         <link rel="stylesheet" type="text/css" href="../usuario/css/glyphicons.css">
         <link rel="stylesheet" type="text/css" href="../usuario/css/styles.css">
         <script src="../usuario/js/jquery.min.js"></script>
+        <script src="../usuario/js/popper.min.js"></script>
         <script src="../usuario/js/bootstrap.min.js"></script>
         
         

@@ -12,7 +12,8 @@
 			<p>parrafo 1</p>	
 			<p>parrafo 2</p>
 		</div>
-		<?php include('include/footer.php'); ?>
+            <!--Pie de pagína de la pagína-->
+            <?php include('include/footer.php'); ?>
 	</body>
 </html>
 
