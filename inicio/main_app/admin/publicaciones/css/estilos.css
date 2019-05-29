@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29-may-2019, 13:53:16
+    Author     : tarek
+*/
+
+.main-content .row{
+    margin: 0px; padding: 0px;
+}
+
+#panel_registro{
+    padding: 5%; 
+    box-shadow: 1px 2px 2px #A4A4A4; 
+    border:1px solid #A4A4A4;
+}
+
+.table-condensed{
+    width: 70%;
+}
+
+div.modal-header{
+    background-color: #084B8A; 
+    color:white;
+}
+
+/* Modelo_listar_datos */
+.btn-primary.btn-xs{
+    width: 100%;
+}
+
+.btn-danger.btn-xs{
+    width: 100%; 
+    margin-top: 1%;
+}
+
+.edit{
+    background-color: #084B8A; 
+    color:white;
+}
+
+.modal-header.delet{
+    background-color: red; 
+    color:white;
+}
+

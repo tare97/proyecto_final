@@ -33,9 +33,9 @@
 			<td><?php echo $tipo; ?></td>
 			<td class="col-lg-1">
 				
-				<button class="btn btn-primary btn-xs" style="width: 100%;" data-toggle="modal" data-target="#myModal_editar"onclick="btn_editar('<?php echo $id_usuario; ?>');">Editar</button>
+				<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal_editar"onclick="btn_editar('<?php echo $id_usuario; ?>');">Editar</button>
 				
-				<button class="btn btn-danger btn-xs" style="width: 100%; margin-top: 1%;" data-toggle="modal" data-target="#myModal_eliminar" onclick="btn_eliminar('<?php echo $id_usuario; ?>');">Elimin</button>
+				<button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal_eliminar" onclick="btn_eliminar('<?php echo $id_usuario; ?>');">Elimin</button>
 			</td>
 		</th>
 		<?php
@@ -49,7 +49,7 @@
 
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header" style="background-color: #084B8A; color:white;">
+      <div class="modal-header edit">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title"> Modal Editar. </h4>
       </div>
@@ -73,7 +73,7 @@
 
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header" style="background-color: red; color:white;">
+      <div class="modal-header delet">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title"> Modal Eliminar. </h4>
       </div>

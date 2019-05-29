@@ -20,8 +20,8 @@
     <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--Enlaces-->
-        <link rel="stylesheet" type="text/css" href="../usuario/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../usuario/css/glyphicons.css">
+        <link rel="stylesheet" type="text/css" href="../usuario/librerias/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../usuario/librerias/bootstrap/css/glyphicons.css">
         <link rel="stylesheet" type="text/css" href="../usuario/css/styles.css">
         <script src="../usuario/js/jquery.min.js"></script>
         <script src="../usuario/js/popper.min.js"></script>

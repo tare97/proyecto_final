@@ -1,25 +1,34 @@
 <?php
-session_start();
-$_SESSION['id_usuario'] = $_row['id_usuario']; 
-$usuario = $_SESSION['id_usuario'];
-//foto
-$foto = $_FILES["foto"]["name"];
-$ruta = $_FILES["foto"]["tmp_name"];
-$destino = "imagenes/".$foto;
-copy($ruta,$destino);
-//demas
-$titulo = $_REQUEST['titulo'];
-$tipo_publi = $_REQUEST['tipo_publi'];
-$texto = $_REQUEST['texto'];
+$usuario = $_POST['usuario'];
+$nombre = $_POST['nombre'];
+$apellido = $_POST['apellido'];
+$correo = $_POST['correo'];
+$tipo = $_POST['tipo'];
+$clave = $_POST['clave'];
+$clavec = md5($clave);
 
 require '../conector/conexion.php';
 
-$sql1 = "INSERT INTO `publicaciones` ( `id_usuario`, `titulo`, `imagen`, `tipo_publicacion`, `texto`) VALUES ('$usuario','$titulo','$destino','$tipo_publi','$texto')";
-$reg = mysqli_query($conn, $sql1);
-if ($reg == TRUE) {
-	echo "Registro realizado";	
-}else{
-    echo "Algo a salido mal";
+$sql = 'SELECT * FROM usuarios';
+$rec = mysqli_query($conn, $sql);
+$verificar = 0;
+
+while ($resultado = mysqli_fetch_object($rec)){
+	if ($resultado->usuario == $usuario) {
+		$verificar = 1;
+	}
 }
+
+if ($verificar == 0){
+	$sql1 = "INSERT INTO `usuarios`(`usuario`, `nombre`, `apellido`, `email`, `tipo_usuario`, `password`) VALUES ('$usuario', '$nombre', '$apellido', '$correo', '$tipo' , '$clavec')";
+
+	$reg = mysqli_query($conn, $sql1);
+	if ($reg == TRUE) {
+		echo "Registro realizado";	
+	}
+}else{
+	echo "Usuario existente";
+}
+
 
 ?>

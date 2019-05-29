@@ -13,37 +13,63 @@ $(document).ready(function(){
 
             //Prohibicion que deje campos vacíos y restricción de cantidad.
             if (nombre === "" || apellido === "" || usuario === "" || correo === "" || clave === "" || clavev === "") {
-                alert("Es obligatorio rellenar todos los campos.");
+                $('#errores').html("Es obligatorio rellenar todos los campos.");
+                // Desaparición del mensaje de error.
+                setTimeout(function(){
+                   $('#errores').fadeOut(1000); 
+                },3000);
                 return false;
             }
             else if (nombre.length < 2 || nombre.length > 20) {
-                alert("El nombre introducido no es valido.");
+                $('#errores').html("El nombre introducido no es valido.");
+                setTimeout(function(){
+                   $('#errores').fadeOut(1000); 
+                },3000);
                 return false;
             }
             else if (apellido.length < 2 || apellido.length > 20) {
-                alert("El apellido introducido no es valido.");
+                $('#errores').html("El apellido introducido no es valido.");
+                setTimeout(function(){
+                   $('#errores').fadeOut(1000); 
+                },3000);
                 return false;
             }
             else if (usuario.length < 2 || usuario.length > 15) {
-                alert("No se permiten usuarios con menos de 2 caracter o mas de 15 caracteres.");
+                $('#errores').html("No se permiten usuarios con menos de 2 caracter o mas de 15 caracteres.");
+                setTimeout(function(){
+                   $('#errores').fadeOut(1000); 
+                },3000);
                 return false;
             }
             else if (correo.length < 5 || correo.length > 30) {
-                alert("No se permiten correos con menos de 5 caracter o mas de 30 caracteres.");
+                $('#errores').html("No se permiten correos con menos de 5 caracter o mas de 30 caracteres.");
+                setTimeout(function(){
+                   $('#errores').fadeOut(1000); 
+                },3000);
                 return false;
             }
             else if (!expresioncorreo.test(correo)) {
-                alert("Correo Incorrecto, ejemplo:[datos]@[datos].[extención].");
+                $('#errores').html("Correo Incorrecto, ejemplo:[datos]@[datos].[extención].");
+                setTimeout(function(){
+                   $('#errores').fadeOut(1000); 
+                },3000);
                 return false;
             }
             else if (clave.length < 6 || clave.length > 30) {
-                alert("No se permiten contraseñas con menos de 6 caracteres o mas de 30 caracteres.");
+                $('#errores').html("No se permiten contraseñas con menos de 6 caracteres o mas de 30 caracteres.");
+                setTimeout(function(){
+                   $('#errores').fadeOut(1000); 
+                },3000);
                 return false;
             }
             else if (clave !== clavev) {
-                alert("Las claves que ha introducido no coinciden, vuelva a intentarlo.");
+                $('#errores').html("Las claves que ha introducido no coinciden, vuelva a intentarlo.");
+                setTimeout(function(){
+                   $('#errores').fadeOut(1000); 
+                },3000);
                 return false;
             }
+            //Si todo es correcto se enviaran los datos...
             else{
                 var datos = $('#frmajax').serialize();
                 $.ajax({

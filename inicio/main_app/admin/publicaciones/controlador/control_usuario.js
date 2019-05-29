@@ -1,13 +1,14 @@
 function btn_guardar_dato(){
-	var titulo = $("#titulo").val();
-	var foto = $("#foto").val();
-        var tipo_publi = $("#id_vista").val();
-        var tipo_publi = $("#id_compra").val();
-	var texto = $("#texto").val();
+	var nombre = $("#nombre").val();
+	var apellido = $("#apellido").val();
+	var correo = $("#correo").val();
+	var usuario = $("#usuario").val();
+	var clave = $("#clave").val();
+	var tipo = "admin";
 
 	//alert(nombre+" "+apellido+" "+correo+" "+usuario+" "+clave);
 
-	var ob = {titulo:titulo, foto:foto, tipo_publi:tipo_publi, texto:texto};
+	var ob = {nombre:nombre, apellido:apellido, correo:correo, usuario:usuario, clave:clave, tipo:tipo};
 
 	$.ajax({
 		type: "POST",
@@ -20,7 +21,9 @@ function btn_guardar_dato(){
 			$("#panel_respuesta").html(data);
 			btn_listar_datos();
 
-		
+			setTimeout(function(){
+				$("#panel_respuesta").html("");
+			},3000);
 
 
 		}

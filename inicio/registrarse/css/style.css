@@ -12,6 +12,14 @@ body{
     
 }
 
+/* Estilos para los errores pertinentes */
+#errores{
+    background-color:red;
+    color:white;
+    text-align: center;
+    width: 100%;
+}
+
 /* Estilos para el título superior de la pagina */
 h1{
     color:#DFA01B;

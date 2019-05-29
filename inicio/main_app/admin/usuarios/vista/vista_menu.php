@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/glyphicons.css">
+        <link rel="stylesheet" type="text/css" href="../css/estilos.css">
 
 	<script type="text/javascript" src="../librerias/bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../librerias/bootstrap/js/bootstrap.min.js"></script>
@@ -36,12 +37,12 @@
         	<br>
         	<br>
         	<br>
-        	<div class="row" style="margin: 0px; padding: 0px;">
+        	<div class="row">
 				<div class="col-lg-6 col-md-8 xs-12">
 					<h3 align="center"> Registro de datos </h3>
-					<div id="panel_registro" style="padding: 5%; box-shadow: 1px 2px 2px #A4A4A4; border:1px solid #A4A4A4;" align="center">
+					<div id="panel_registro" align="center">
 						<!--Panel de datos-->
-						<table class="table table-condensed" style="width: 70%;">
+						<table class="table table-condensed">
 							<tr>
 								<td>
 									<label>Nombre</label>
@@ -116,7 +117,7 @@
 
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header" style="background-color: #084B8A; color:white;">
+      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title"> Selector. </h4>
       </div>
