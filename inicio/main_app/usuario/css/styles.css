@@ -13,15 +13,23 @@ body{
 }
 
 .x{
+   cursor:context-menu;
+   border-radius: 5px;
+   margin: 3px;
+   margin-right: 40px;
+   padding-left:10px ;
+   padding-right:10px ;
    background:#0D688F;
 }
 
 .xa{
-   background:#0D688F;
+   border-radius: 15px;
+   margin: 3px;
+   background:red;
 }
 
 .xa:hover{
-    background:red;
+    background:gray;
 }
 
 /* Barra lateral */
@@ -31,7 +39,7 @@ body{
     z-index:10;
     width: 250px;
     height: 100%;
-    margin-top: -22px; 
+    margin-top: -21px; 
     background: #0D688F;
     color: #0D688F;
     outline: 1px solid #2a2a2a;
@@ -73,7 +81,7 @@ body{
 
 .main-content{
     width: 100%;
-    height: 82%;
+    height: 81%;
     position: absolute;
     z-index:10;
     background:url(fondo-user.jpg) no-repeat center bottom;
@@ -108,7 +116,7 @@ body{
 
 .publicacion{
     background-color: white;
-    margin: 50px 300px 100px 200px;
+    margin: 80px 300px 200px 200px;
     padding: 20px;
     border: 2px solid black;
     border-radius: 20px;
@@ -174,3 +182,60 @@ body{
     .publicacion .shop{
         padding-left: 520px;
     }
+
+    
+/* Estilos para el panel de regístro */
+#registro-public{
+    width: 450px;
+    margin:auto;
+    background: rgba(89,155,247,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+    font-family: monospace;
+}
+
+#registro-public h2{
+    color: black;
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#registro-public input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+#registro-public input[type="radio"]{
+    width: 20%;
+    padding: 20px;
+}
+
+#registro-public textarea{
+    min-height: 300px;
+    max-height: 400px;
+    max-width: 100%;
+}
+
+#regpublic{
+    background: gray;
+    color: darkblue;
+    padding: 20px;
+}
+
+#regpublic:hover{
+    cursor: pointer;
+}
+
+@media (max-width:480px){
+    #registro-public{
+        width: 100%;
+    }
+}

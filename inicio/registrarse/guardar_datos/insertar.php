@@ -21,18 +21,10 @@
 	}
 
 	if ($verificar == 0) {
-		if($password === $password2){
-		$sql2="INSERT into usuarios (usuario, nombre, apellido, password, tipo_usuario, email)
-		values ('$usuario', '$nombre', '$apellido', '$pw_encrip', 'usuario', '$correo' )";
-		mysqli_query($conn, $sql2);
-		echo "Registro realizado con exíto.";
-		}else{
-			echo "Las contraseñas no coinciden, porvafor vuelva a intentarlo";
-		}
+            $sql2="INSERT into usuarios (usuario, nombre, apellido, password, tipo_usuario, email)
+            values ('$usuario', '$nombre', '$apellido', '$pw_encrip', 'usuario', '$correo' )";
+            mysqli_query($conn, $sql2);
+            echo "Registro realizado con exíto.";
 	}else{
-		echo "El usuario ya existe";
+            echo "El usuario ya existe";
 	}
-	
-
-	
-?>
