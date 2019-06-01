@@ -6,18 +6,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Roles</title>
+	<title>EnjoyArt - Editar Publicación</title>
+        <link rel="stylesheet" type="text/css" href="estilos_editar.css">
 </head>
 <body>
 	<header>
-		<h1>Roles</h1>
-		<h2>Editar</h2>
+            <h1>Pagína de Edición.</h1>
 	</header>
 	<form action="../../controladores/Roles.php" method="post">
-		<input type="hidden" name="id" value="<?= $_GET['id'] ?>" />
-		<input name="titulo" placeholder="Titulo" value="<?= $rol[2] ?>" required autofocus />
-                <textarea name="texto" placeholder="texto" rows="20" cols="80" required><?= $rol[5] ?></textarea>
-		<input name="a" type="submit" value="Editar" />
+            <h3>Panel de edición.</h3>
+            <!--Input escondido que guarda la id de la publicacion en cuestion-->
+            <input type="hidden" name="id" value="<?= $_GET['id'] ?>" />
+            <!--TITULO-->
+            <input name="titulo" placeholder="Titulo" value="<?= $rol[2] ?>" required autofocus />
+            <!--RELATO CORTO-->
+            <textarea name="texto" placeholder="texto" required><?= $rol[5] ?></textarea>
+            <input name="a" type="submit" value="Editar" />
 	</form>
 </body>
 </html>

@@ -1,0 +1,66 @@
+body{
+    font-family: monospace;
+    background-image: url(fondo-registro.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+form{
+    width: 580px;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top:50px;
+    border-radius: 7px;
+}
+
+h3{
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 30px;
+  font-size: 30px;
+}
+
+input, textarea{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: none;
+}
+
+textarea{
+    min-height: 200px;
+    max-height: 400px;
+    max-width: 100%;
+}
+
+input[type="submit"]{
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    background: gray;
+    color: #333;
+}
+
+/*Es como un if si se cumple esa condicion se realiza esa operacion.*/
+@media (max-width:580px){
+    form{
+        width: 100%;
+    }
+}

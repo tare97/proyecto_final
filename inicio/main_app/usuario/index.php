@@ -49,22 +49,39 @@
                                 </div>
                             </div>
                             <!--Cuarta fila-->
-                            <div class="row">
+                            <div class="row botones">
                                 <!--Dos partes para los likes y a la para los comentarios-->
-                                <div class="col-md-12 likcom">
-                                    <a>Likes</a>
-                                    <a>Comentarios</a>
+                                <div class="col-xs-6 likcom">
+                                    <!--Likes-->
+                                    <a href=""><span class="glyphicon glyphicon-heart"></span></a>
+                                    <!--Comentarios-->
+                                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-comment"></span></button>
+                                    <!--Modal para los comentarios-->
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">Modal</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>This is a large modal.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <!--Quinta fila-->
-                            <div class="row">
+                                <!--Y los botones de edicion, eiminacion o compra-->
                                 <?php
                                 //Si la publicacion tiene el id del usuario logeado podras editarlo y borrarlo
                                 if(isset($_SESSION['id_usuario'])){
                                     if ($_SESSION['id_usuario'] == $res['id_usuario']) {
                                     ?>
                                     <!--Botones para borrar o editar-->
-                                    <div class="col-md-12 tools">
+                                    <div class="col-xs-6 tools">
                                         <button type="button" class="btn btn-primary">Editar</button>
                                         <button type="button" class="btn btn-danger">Eliminar</button>
                                     </div>
@@ -75,7 +92,7 @@
                                         
                                         ?>
                                     <!--Botones para comprar-->
-                                    <div class="col-md-12 shop">
+                                    <div class="col-xs-6 shop">
                                         <button type="button" class="btn btn-success">Comprar</button>
                                     </div>
                                 <?php  
