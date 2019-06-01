@@ -156,8 +156,10 @@ body{
 }
 
 .publicacion .dibujo{
-    height: 350px;
-    width: 530px;
+    max-height:200px;
+    min-height:200px;
+    max-width:500px;
+    min-width:500px;
     margin: 10px 0px 10px 15px;
 }
 

@@ -45,7 +45,7 @@
                                     <p><?php echo $res['texto']; ?></p>
                                 </div>
                                 <div class="d-none d-lg-block col-lg-6 dibujo">
-                                    <img src="<?php echo $res["imagen"] ?>" width="530" heigth="350">
+                                    <img src="<?php echo $res["imagen"] ?>" width="400" heigth="300">
                                 </div>
                             </div>
                             <!--Cuarta fila-->

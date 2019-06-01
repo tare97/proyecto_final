@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once 'perfil/modelos/Rol.php' ;
 ?>
 <title><?php echo $PAGE_TITLE ?></title>
 
