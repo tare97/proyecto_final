@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
           <li class="x"><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['login_user']; ?></a></li>
-          <li class="xa"><a href="../usuario/logout.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li class="xa"><a href="../usuario/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       </ul>
     </div>
   </div>

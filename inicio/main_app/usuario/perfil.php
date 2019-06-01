@@ -8,39 +8,44 @@
             <?php include('include/design-top.php'); ?>
             <?php include('include/navigation.php'); ?>
             <div class="main-content">
-                <header>
-                    <h1>Roles</h1>
-                    <h2>Listar</h2>
-                </header>
-                <table border="1" collapse style="background: red;">
-                    <thead>
-			<tr>
-                            <th>ID</th>
-                            <th>Titulo</th>
-                            <th>Foto</th>
-                            <th>Texto</th>
-                            <th>Fecha</th>
-                            <th colspan="2">Opciones</th>
-			</tr>
-                    </thead>
-                    <tbody>
-			<?php foreach (Rol::listar() as $fila) { ?>
-				<tr>
-					<td><?= $fila[0] ?></td>
-					<td><?= $fila[2] ?></td>
-                                        <td><?= $fila[3] ?></td>
-                                        <td><?= $fila[5] ?></td>
-                                        <td><?= $fila[6] ?></td>
-					<td>
-						<a href="perfil/vistas/roles/editar.php?id=<?=base64_encode($fila[0])?>">Editar</a>
-					</td>
-					<td>
-						<a href="perfil/controladores/Roles.php?a=elim&id=<?=base64_encode($fila[0])?>" onclick="return confirm('¿Desea eliminar?')">Eliminar</a>
-					</td>
-				</tr>
-			<?php } ?>
-                    </tbody>
-                </table>
+                <!--Estructura de las publicaciones-->
+                <?php foreach (Rol::listar() as $fila) { ?>
+                    <!--PUBLICACIONES-->
+                    <div class="row public-perfil">
+                        <!--INFORMACION DE LA PUBLICACION-->
+                        <div class="row superior">
+                            <div class="col-xs-6 num-usuario">
+                                <h5><span class="glyphicon glyphicon-user"></span> <?= $fila[1] ?></h5>
+                            </div>
+                            <div class="col-xs-6 fecha-publicacion">
+                                <h5><?= $fila[6] ?></h5>
+                            </div>
+                        </div>
+                        <!--TITULO-->
+                        <div class="row titulo">
+                            <div class="col-xs-12">
+                                <h2><?= $fila[2] ?></h2>
+                            </div>
+                        </div>
+                        <!--IMAGEN-->
+                        <div class="row imagen">
+                            <div class="col-xs-12">
+                                <img src="<?= $fila[3] ?>">
+                            </div>
+                        </div>
+                        <div class="row texto">
+                            <div class="col-xs-12">
+                                <p><?= $fila[5] ?></p>
+                            </div>
+                        </div>
+                        <div class="row botones">
+                            <div class="col-xs-12">
+                                <a class="btn btn-primary" href="perfil/vistas/roles/editar.php?id=<?=base64_encode($fila[0])?>">Editar</a>
+                                <a class="btn btn-danger" href="perfil/controladores/Roles.php?a=elim&id=<?=base64_encode($fila[0])?>" onclick="return confirm('¿Desea eliminar?')">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
             <!--Pie de pagína de la pagína-->
             <?php include('include/footer.php'); ?>

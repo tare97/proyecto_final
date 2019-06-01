@@ -16,7 +16,7 @@
 	<form action="../../controladores/Roles.php" method="post">
 		<input type="hidden" name="id" value="<?= $_GET['id'] ?>" />
 		<input name="titulo" placeholder="Titulo" value="<?= $rol[2] ?>" required autofocus />
-                <textarea name="texto" placeholder="texto" required><?= $rol[5] ?></textarea>
+                <textarea name="texto" placeholder="texto" rows="20" cols="80" required><?= $rol[5] ?></textarea>
 		<input name="a" type="submit" value="Editar" />
 	</form>
 </body>

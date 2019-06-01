@@ -25,27 +25,27 @@
                             <!--Primera fila-->
                             <div class="row arriba">
                                 <!--Parte superior donde mostramos el id del usuario y la fecha de publicación-->
-                                <div class="col-md-6">
-                                    <h4 class="usr"><?php echo $res['id_usuario']; ?></h4>
+                                <div class="col-xs-6">
+                                    <h4 class="usr"><span class="glyphicon glyphicon-user"></span> <?php echo $res['id_usuario']; ?></h4>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-xs-6">
                                     <h4 class="fch"><?php echo $res['fecha_creacion']; ?></h4>
                                 </div>
                             </div>
                             <!--Segunda fila El titulo de la publicacion-->
-                            <div class="row">
+                            <div class="row tit">
                                 <div class="col-md-12">
                                     <h2><?php echo $res['titulo']; ?></h2>
                                 </div>
                             </div>
                             <!--Tercera fila-->
-                            <div class="row">
+                            <div class="row central">
                                 <!--Dos partes el relato corto y a la derecha la imagen-->
-                                <div class="col-lg-6 relato">
-                                    <p><?php echo $res['texto']; ?></p>
+                                <div class="col-xs-6 dibujo">
+                                    <img src="<?php echo $res["imagen"] ?>">
                                 </div>
-                                <div class="d-none d-lg-block col-lg-6 dibujo">
-                                    <img src="<?php echo $res["imagen"] ?>" width="400" heigth="300">
+                                <div class="col-xs-6 relato">
+                                    <p><?php echo $res['texto']; ?></p>
                                 </div>
                             </div>
                             <!--Cuarta fila-->
