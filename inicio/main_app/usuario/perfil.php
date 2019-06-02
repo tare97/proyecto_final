@@ -15,7 +15,7 @@
                         <!--INFORMACION DE LA PUBLICACION-->
                         <div class="row superior">
                             <div class="col-xs-6 num-usuario">
-                                <h5><span class="glyphicon glyphicon-user"></span> <?= $fila[1] ?></h5>
+                                <h5><span class="glyphicon glyphicon-user"></span>(id): <?= $fila[1] ?></h5>
                             </div>
                             <div class="col-xs-6 fecha-publicacion">
                                 <h5><?= $fila[6] ?></h5>

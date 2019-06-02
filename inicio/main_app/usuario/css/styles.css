@@ -188,8 +188,11 @@ body{
 
     /* Estilos para los likes y los comentario */
     .publicacion .likcom{
-        margin-top: 5px;
-        padding-left: 50px;
+        padding-left: 80px;
+    }
+    
+    .publicacion .likcom button{
+        margin-left: 20px;
     }
 
 

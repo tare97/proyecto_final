@@ -26,7 +26,7 @@
                             <div class="row arriba">
                                 <!--Parte superior donde mostramos el id del usuario y la fecha de publicación-->
                                 <div class="col-xs-6">
-                                    <h4 class="usr"><span class="glyphicon glyphicon-user"></span> <?php echo $res['id_usuario']; ?></h4>
+                                    <h4 class="usr"><span class="glyphicon glyphicon-user"></span>(id): <?php echo $res['id_usuario']; ?></h4>
                                 </div>
                                 <div class="col-xs-6">
                                     <h4 class="fch"><?php echo $res['fecha_creacion']; ?></h4>
@@ -54,25 +54,9 @@
                                 <div class="col-xs-6 likcom">
                                     <!--Likes-->
                                     <a href=""><span class="glyphicon glyphicon-heart"></span></a>
-                                    <!--Comentarios-->
-                                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-comment"></span></button>
-                                    <!--Modal para los comentarios-->
-                                    <div class="modal fade" id="myModal" role="dialog">
-                                        <div class="modal-dialog modal-lg">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                    <h4 class="modal-title">Modal</h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>This is a large modal.</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!--Comentarios (Estructura en la parte inferior)-->
+                                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalcoment" onclick="mostrar_comentario(<?php echo $res['id_publicacion']; ?>)"><span class="glyphicon glyphicon-comment"></span></button>
+                                    
                                 </div>
                                 <!--Y los botones de edicion, eiminacion o compra-->
                                 <?php
@@ -105,6 +89,23 @@
                     <?php
                     }
                     ?>   
+            </div>
+            <!--Modal para los comentarios-->
+            <div class="modal fade" id="myModalcoment" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>This is a large modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--Pie de pagína-->
             <?php include('include/footer.php'); ?>

@@ -1,5 +1,14 @@
 <?php
     session_start();
+    // Estructura de seguridad para que no se puede acceder introduciendo la url.
+    error_reporting(0);
+    //Se cra una variable con el nombre de usuario.
+    $varsesion = $_SESSION['login_user'];
+    //Condición : Si el usuario es nulo o vacío sera rechazado y no podra acceder.
+    if($varsesion == null || $varsesion = ''){
+        echo 'Usted no tiene autorización, no se a logeado correctamente. <a href="../../index.php">Volver</a>';
+        die();
+    }
     require_once 'perfil/modelos/Rol.php' ;
 ?>
 <title><?php echo $PAGE_TITLE ?></title>
@@ -27,6 +36,7 @@
         <script src="../usuario/js/jquery.min.js"></script>
         <script src="../usuario/js/popper.min.js"></script>
         <script src="../usuario/js/bootstrap.min.js"></script>
+        <script src="../comentarios/controlador/comentarios.js"></script>
         
         
 
