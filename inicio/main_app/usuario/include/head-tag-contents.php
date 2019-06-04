@@ -29,16 +29,18 @@
     ?>
     <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--Enlaces-->
+        <!--ENLACES DE LIBRERIAS-->
         <link rel="stylesheet" type="text/css" href="../usuario/librerias/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../usuario/librerias/bootstrap/css/glyphicons.css">
-        <link rel="stylesheet" type="text/css" href="../usuario/css/styles.css">
         <script src="../usuario/js/jquery.min.js"></script>
         <script src="../usuario/js/popper.min.js"></script>
         <script src="../usuario/js/bootstrap.min.js"></script>
-        <script src="../comentarios/controlador/comentarios.js"></script>
-        
-        
+        <!--ENLACES PROPIOS--->
+        <link rel="stylesheet" type="text/css" href="../usuario/css/styles.css">
+        <!--Pagina principal , enlaces necesarios para eliminar y editar datos-->
+        <script src="../usuario/pagina_principal/controlador/controlador_public.js"></script>
+        <!--Enlace script para el contador de caracteres-->
+        <script src="../usuario/nuevasPublicaciones/contarCaracteres.js"></script>
 
 
 

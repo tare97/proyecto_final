@@ -14,7 +14,9 @@
                         Adquicisión <input type="radio" name="modo" value="compra"> 
                         Vista <input type="radio" name="modo" value="vista"> 
                         <input type="file" name="foto" id="foto">
-                        <textarea name="texto" id="texto" placeholder="Introduce tu relato aquí..."></textarea>
+                        <textarea name="texto" id="texto" onpaste="contarcaracteres();" onkeyup="contarcaracteres();" placeholder="Introduce tu relato aquí..." maxlength="630"></textarea>
+                        <div id="res">O caractere/s</div>
+                        <br>
                         <input type="submit" id="regpublic" name="enviar" value="Enviar">    
                     </form>
 		</div>

@@ -43,10 +43,10 @@ CREATE TABLE `publicaciones` (
 --
 
 CREATE TABLE `comentar` (
-  `id_comentario` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,*/
+  `id_comentario` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `id_publicacion` int(11) COLLATE utf8_unicode_ci NOT NULL,
   `id_usuario` int(11) COLLATE utf8_unicode_ci NOT NULL,
-  `comentario` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `comentario` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -60,7 +60,7 @@ CREATE TABLE `puntuar` (
   `id_puntuacion` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `id_usuario` int(11) COLLATE utf8_unicode_ci NOT NULL,
   `id_publicacion` int(11) COLLATE utf8_unicode_ci NOT NULL,
-  `puntuacion_positiva` int(11) COLLATE utf8_unicode_ci NOT NULL,
+  `puntuacion_positiva` int(11) COLLATE utf8_unicode_ci NOT NULL
   `puntuacion_negativa` int(11) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
