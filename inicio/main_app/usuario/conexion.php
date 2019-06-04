@@ -9,7 +9,7 @@
         if (!$conn->set_charset("utf8")) {
             printf("Error cambiando el juego de caracteres utf8: %s\n", $conn->error);
         } else {
-            printf("caracteres actual: %s\n", $conn->character_set_name());
+            $conn->character_set_name();
         }
  
 ?>

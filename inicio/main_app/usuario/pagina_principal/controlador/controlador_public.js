@@ -112,6 +112,7 @@ function btn_comentario(id_publicacion){
 	});
 }
 
+//guardar comentario.
 function btn_camentario_dato(){
     var id_publicacion = $("#id_publicacion").val();
     var comentario = $("#mas_comentario").val();
@@ -137,5 +138,21 @@ function btn_camentario_dato(){
 
                 window.location.reload();
             }
+	});
+}
+
+//listar los comentarios.
+function btn_listar_comentarios(id_publicacion){
+        var ob = {id_publicacion:id_publicacion};
+	$.ajax({
+		type: "POST",
+		url:"pagina_principal/modelo/modelo_listar_datos.php",
+		data: ob,
+		beforeSend: function(objeto){
+
+		},
+		success: function(data){
+			$("#panel_listado").html(data);
+		}
 	});
 }

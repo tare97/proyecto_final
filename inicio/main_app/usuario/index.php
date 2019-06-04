@@ -55,7 +55,11 @@
                                 <!--Likes-->
                                 <a href=""><span class="glyphicon glyphicon-heart"></span></a>
                                 <!--Comentarios (Estructura en la parte inferior)-->
-                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalcoment" onclick="btn_comentario('<?php echo $res['id_publicacion']; ?>');"><span class="glyphicon glyphicon-comment"></span></button>    
+                                <?php
+                                //dato para conseguír el dato.
+                                $id_publicacion = $res['id_publicacion'];
+                                ?>
+                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalcoment" onclick="btn_comentario('<?php echo $id_publicacion; ?>');"><span class="glyphicon glyphicon-comment"></span></button>    
                             </div>
                             <!--Y los botones de edicion, eiminacion o compra-->
                             <?php
@@ -82,7 +86,7 @@
                             }
                             ?> 
                         </div>
-                    </div>   
+                    </div> 
                     <?php
                     }
                     ?>
@@ -98,7 +102,9 @@
                                 <div class="modal-body">
                                     <div id="panel_comentario"></div>
                                     <div id="panel_respuesta_comentario"></div>
-                                    <button class="btn btn-info btn-md" onclick="btn_listar_comentarios();"> comentarios </button>
+                                    <div id="panel_listado" class="">
+                                        <!--Panel de los comentarios a listar-->
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-info" onclick ="btn_camentario_dato();">Añadir</button>

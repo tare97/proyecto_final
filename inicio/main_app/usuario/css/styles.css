@@ -112,6 +112,7 @@ body{
     
 }
 
+/* PAGINA 1 - INDEX */
 /* Estilos para las publicaciones */
 
 .publicacion{
@@ -205,64 +206,41 @@ body{
         padding-left: 400px;
     }
 
-    
-/* Estilos para el panel de regístro */
-#registro-public{
-    width: 450px;
-    margin:auto;
-    background: rgba(89,155,247,0.4);
-    padding: 10px 20px;
-    box-sizing: border-box;
-    margin-top: 20px;
-    border-radius: 7px;
-    font-family: monospace;
+/* estilos de los models */
+/*comentarios */
+.comentarioslist{
+    border:1px solid #0D688F;
+    margin: auto;
+    margin-top: 15px;
 }
 
-#registro-public h2{
-    color: black;
-    text-align: center;
-    margin: 0;
-    font-size: 40px;
-    margin-bottom: 20px;
+.comentarioslist .datos_comentario{
+    margin: auto;
+    border:1px solid #0D688F;
+    background:#0D688F; 
 }
 
-#registro-public input, textarea{
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 7px;
-    box-sizing: border-box;
+.comentarioslist .datos_comentario .usrc h4{
+    text-align: left;
+    color:white;
+}
+
+.comentarioslist .datos_comentario .fechc h4{
+    text-align: right;
+    color:white;
+}
+
+.comentarioslist .comentario_usr{
+    margin: auto;
+}
+
+.comentarioslist .comentario_usr .dato_comentario p{
+    margin: auto;
+    padding: 20px;
     font-size: 17px;
-    border: none;
 }
 
-#registro-public input[type="radio"]{
-    width: 20%;
-    padding: 20px;
-}
-
-#registro-public textarea{
-    min-height: 300px;
-    max-height: 400px;
-    max-width: 100%;
-}
-
-#regpublic{
-    background: gray;
-    color: darkblue;
-    padding: 20px;
-}
-
-#regpublic:hover{
-    cursor: pointer;
-}
-
-@media (max-width:480px){
-    #registro-public{
-        width: 100%;
-    }
-}
-
-/* Publicaciones del perfil */
+/* PAGINA 2 - PERFIL */
 .public-perfil{
     border: 5px solid #0D688F;
     box-sizing: border-box;
@@ -349,7 +327,62 @@ body{
         }
     
     
-    
+/* PAGINA 3 - REGISTRO DE NUEVAS PUBLICACIONES */
+/* Estilos para el panel de regístro */
+#registro-public{
+    width: 450px;
+    margin:auto;
+    background: rgba(89,155,247,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+    font-family: monospace;
+}
+
+#registro-public h2{
+    color: black;
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#registro-public input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+#registro-public input[type="radio"]{
+    width: 20%;
+    padding: 20px;
+}
+
+#registro-public textarea{
+    min-height: 300px;
+    max-height: 400px;
+    max-width: 100%;
+}
+
+#regpublic{
+    background: gray;
+    color: darkblue;
+    padding: 20px;
+}
+
+#regpublic:hover{
+    cursor: pointer;
+}
+
+@media (max-width:480px){
+    #registro-public{
+        width: 100%;
+    }
+}   
     
     
     
