@@ -1,36 +1,3 @@
-function btn_guardar_dato(){
-	var nombre = $("#nombre").val();
-	var apellido = $("#apellido").val();
-	var correo = $("#correo").val();
-	var usuario = $("#usuario").val();
-	var clave = $("#clave").val();
-	var tipo = "admin";
-
-	//alert(nombre+" "+apellido+" "+correo+" "+usuario+" "+clave);
-
-	var ob = {nombre:nombre, apellido:apellido, correo:correo, usuario:usuario, clave:clave, tipo:tipo};
-
-	$.ajax({
-		type: "POST",
-		url:"../modelo/modelo_registar_datos.php",
-		data: ob,
-		beforeSend: function(objeto){
-
-		},
-		success: function(data){
-			$("#panel_respuesta").html(data);
-			btn_listar_datos();
-
-			setTimeout(function(){
-				$("#panel_respuesta").html("");
-			},3000);
-
-
-		}
-	});
-}	
-
-
 function btn_listar_datos(){
 	
 	var ob = "";
@@ -48,8 +15,8 @@ function btn_listar_datos(){
 	});
 }	
 
-function btn_editar(id_usuario){
-	var ob = {id_usuario:id_usuario};
+function btn_editar(id_publicacion){
+	var ob = {id_publicacion:id_publicacion};
 
 	$.ajax({
 		type: "POST",
@@ -66,16 +33,13 @@ function btn_editar(id_usuario){
 
 function btn_guardar_edicion(){
 
-	var id_usuario = $("#id_usuario").val();
-	var nombre = $("#nombre_ed").val();
-	var apellido = $("#apellido_ed").val();
-	var correo = $("#correo_ed").val();
-	var usuario = $("#usuario_ed").val();
-	var tipo = $("#tipo_ed").val();
+	var id_publicacion = $("#id_publicacion").val();
+	var titulo = $("#titulo_ed").val();
+	var texto = $("#texto_ed").val();
 
 	//alert(nombre+" "+apellido+" "+correo+" "+usuario+" "+clave);
 
-	var ob = {id_usuario:id_usuario, nombre:nombre, apellido:apellido, correo:correo, usuario:usuario, tipo:tipo};
+	var ob = {id_publicacion:id_publicacion, titulo:titulo, texto:texto};
 
 	$.ajax({
 		type: "POST",
@@ -102,8 +66,8 @@ function btn_guardar_edicion(){
 	});
 }
 
-function btn_eliminar(id_usuario){
-	var ob = {id_usuario:id_usuario};
+function btn_eliminar(id_publicacion){
+	var ob = {id_publicacion:id_publicacion};
 
 	$.ajax({
 		type: "POST",
@@ -120,9 +84,9 @@ function btn_eliminar(id_usuario){
 
 function btn_eliminar_dato(){
 
-	var id_usuario = $("#id_usuario").val();
+	var id_publicacion = $("#id_publicac").val();
 
-	var ob = {id_usuario:id_usuario};
+	var ob = {id_publicacion:id_publicacion};
 
 	$.ajax({
 		type: "POST",
@@ -133,7 +97,6 @@ function btn_eliminar_dato(){
 		},
 		success: function(data){
 			$("#panel_eliminar").html(data);
-			//btn_listar_datos();
 
 			setTimeout(function(){
 				$("#panel_eliminar").html("");
@@ -150,12 +113,12 @@ function btn_eliminar_dato(){
 	});
 }
 
-function select_usuario(){
+function select_publicacion(){
 	//id="select_usuario"
-	var id_usuario = $("#select_usuario").val();
+	var id_publicacion = $("#select_publicacion").val();
 	//alert("hola mundo = " + id_usuario);
 
-	var ob = {id_usuario:id_usuario};
+	var ob = {id_publicacion:id_publicacion};
 
 	$.ajax({
 		type: "POST",

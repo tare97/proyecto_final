@@ -240,6 +240,10 @@ body{
     font-size: 17px;
 }
 
+.comentario{
+    border: 2px solid black;
+}
+
 /* PAGINA 2 - PERFIL */
 .public-perfil{
     border: 5px solid #0D688F;

@@ -101,13 +101,14 @@
                                 </div>
                                 <div class="modal-body">
                                     <div id="panel_comentario"></div>
+                                    <button type="button" class="btn btn-info comentario" onclick ="btn_camentario_dato();">Añadir</button>
                                     <div id="panel_respuesta_comentario"></div>
                                     <div id="panel_listado" class="">
                                         <!--Panel de los comentarios a listar-->
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-info" onclick ="btn_camentario_dato();">Añadir</button>
+                                    
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
@@ -149,7 +150,7 @@
                                 <!--Pie de pagína del model-->
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-info" onclick="btn_guardar_edicion();">Guardar</button>
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal" >Cerrar</button>
                                 </div>
                             </div>
                         </div>

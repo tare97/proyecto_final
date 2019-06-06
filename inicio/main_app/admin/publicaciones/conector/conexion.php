@@ -5,4 +5,11 @@
 	}else{
 		//echo "conexion realizada";
 	}
+        
+        /* cambio del juego de caracteres a utf8 */
+        if (!$conn->set_charset("utf8")) {
+            printf("Error cambiando el juego de caracteres utf8: %s\n", $conn->error);
+        } else {
+            $conn->character_set_name();
+        }
 ?>

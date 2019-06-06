@@ -108,6 +108,7 @@ function btn_comentario(id_publicacion){
 		},
 		success: function(data){
 			$("#panel_comentario").html(data);
+                        btn_listar_comentarios(id_publicacion)
 		}
 	});
 }
@@ -131,12 +132,13 @@ function btn_camentario_dato(){
                 setTimeout(function(){
                     $("#panel_respuesta_comentario").html("");
                 },3500);
-
+                
                 setTimeout(function(){
-                    $("#myModalcoment").modal("hide").fadeIn("slow");
-                },3500);
-
-                window.location.reload();
+                    $("#mas_comentario").html("");
+                },1500);
+                
+                comentario = "";
+                btn_listar_comentarios(id_publicacion)
             }
 	});
 }

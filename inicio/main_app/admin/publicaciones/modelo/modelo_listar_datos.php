@@ -1,41 +1,37 @@
 <table class="table table-bordered">
 	<tr>
 		<th>#</th>
-		<th>Usuario</th>
-		<th>Nombre</th>
-		<th>Apellido</th>
-		<th>Email</th>
-		<th>Tipo de Usuario</th>
+                <th>Id</th>
+		<th>Titulo</th>
+		<th>Imagen</th>
+		<th>Tipo de Publicacion</th>
 		<th></th>
 	</tr>
 <?php
 	require '../conector/conexion.php';
 
-	$sql = "SELECT * FROM usuarios ORDER BY id_usuario DESC";
+	$sql = "SELECT * FROM publicaciones ORDER BY id_publicacion DESC";
 	$rec = mysqli_query($conn, $sql);
 	$i = 0;
 
 	while ($row = mysqli_fetch_object($rec)){
 		$i++;
-		$id_usuario = $row->{'id_usuario'};
-		$usuario = $row->{'usuario'};
-		$nombre = $row->{'nombre'};
-		$apellido = $row->{'apellido'};
-		$email = $row->{'email'};
-		$tipo = $row->{'tipo_usuario'};
+		$id_publicacion = $row->{'id_publicacion'};
+		$titulo = $row->{'titulo'};
+		$imagen = $row->{'imagen'};
+		$tipo = $row->{'tipo_publicacion'};
 		?>
 		<tr>
 			<td><?php echo $i; ?></td>
-			<td><?php echo $usuario; ?></td>
-			<td><?php echo $nombre; ?></td>
-			<td><?php echo $apellido; ?></td>
-			<td><?php echo $email; ?></td>
+			<td><?php echo $id_publicacion; ?></td>
+			<td><?php echo $titulo; ?></td>
+			<td><?php echo $imagen; ?></td>
 			<td><?php echo $tipo; ?></td>
 			<td class="col-lg-1">
 				
-				<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal_editar"onclick="btn_editar('<?php echo $id_usuario; ?>');">Editar</button>
+				<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal_editar"onclick="btn_editar('<?php echo $id_publicacion; ?>');">Editar</button>
 				
-				<button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal_eliminar" onclick="btn_eliminar('<?php echo $id_usuario; ?>');">Elimin</button>
+				<button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal_eliminar" onclick="btn_eliminar('<?php echo $id_publicacion; ?>');">Elimin</button>
 			</td>
 		</th>
 		<?php
@@ -43,7 +39,7 @@
 ?>	
 </table>
 
-<!-- Modal -->
+<!-- Modal de edicion -->
 <div id="myModal_editar" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -67,7 +63,7 @@
   </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal de eliminacion -->
 <div id="myModal_eliminar" class="modal fade" role="dialog">
   <div class="modal-dialog">
 

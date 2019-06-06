@@ -27,6 +27,9 @@
                 <input type="email" id="correo" name="correo" placeholder="Correo Electronico" class="input-56" required >
                 <input type="password" id="pass" name="password" placeholder="Contraseña" class="input-48" required >
                 <input type="password" id="pass2" name="password2" placeholder="Verifica Contraseña" class="input-48" required >
+                <h3>Captcha:</h3>
+                <img src="captcha/captcha.php" id="capt">
+                <input type="text" id="confirmacion" name="captcha" placeholder="Introduce captcha">
                 <button  id="btnguardar">Guardar datos</button>
                 <p class="form__link">¿Ya tienes cuenta? <a href="../index.php">Ingrese aquí</a></p>
             </div>

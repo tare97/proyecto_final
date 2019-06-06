@@ -1,19 +1,17 @@
 <?php
-$id_usuario = $_POST['id_usuario'];
-$usuario = $_POST['usuario'];
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$correo = $_POST['correo'];
-$tipo = $_POST['tipo'];
+$id_publicacion = $_POST['id_publicacion'];
+$titulo = $_POST['titulo'];
+$texto = $_POST['texto'];
+
 
 
 require '../conector/conexion.php';
 
-$sql = 'SELECT * FROM usuarios';
+$sql = 'SELECT * FROM publicaciones';
 $rec = mysqli_query($conn, $sql);
 
 
-$sql1 = "UPDATE `usuarios` SET `usuario` = '$usuario', `nombre` = '$nombre', `apellido` = '$apellido', `email` = '$correo', `tipo_usuario` = '$tipo'  WHERE `usuarios`.`id_usuario` = $id_usuario";
+$sql1 = "UPDATE `publicaciones` SET `titulo` = '$titulo',  `texto` = '$texto'  WHERE `publicaciones`.`id_publicacion` = $id_publicacion";
 
 $reg = mysqli_query($conn, $sql1);
 if ($reg == TRUE) {

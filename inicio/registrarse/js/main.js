@@ -22,6 +22,10 @@ window.onload  = function(){
     const clavev = document.getElementById("pass2");
     clavev.addEventListener("focusout", rclavev);
     
+    /* CAPTCHA */
+    const captcha = document.getElementById("confirmacion");
+    captcha.addEventListener("focusout", rcaptcha);
+    
     /* Boton de regístro */
     const registrar = document.getElementById("btnguardar");
     registrar.addEventListener("click", registro);
@@ -104,9 +108,20 @@ function rclavev(){
     }
 }
 
+function rcaptcha(){
+    const captcha = document.getElementById("confirmacion").value;
+    if (captcha.length < 1) {
+        document.getElementById('errores').innerHTML = "Debes rellenar el captcha.";
+        return false;
+    }else{
+        document.getElementById('errores').innerHTML = "";
+        return true;
+    }
+}
+
 /* Regístro del usuario */
 function registro(){
-    if(rnombre() && rapellido() && rusuario() && rcorreo() && rclave() && rclavev()){
+    if(rnombre() && rapellido() && rusuario() && rcorreo() && rclave() && rclavev() && rcaptcha()){
         $(document).ready(function(){
             var datos = $('#frmajax').serialize();
             $.ajax({

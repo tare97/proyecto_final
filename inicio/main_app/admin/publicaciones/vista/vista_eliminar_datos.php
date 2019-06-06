@@ -1,18 +1,17 @@
 <?php
-$id_usuario = $_POST['id_usuario'];
+$id_publicacion = $_POST['id_publicacion'];
 
 require '../conector/conexion.php';
 
-$sql = "SELECT * FROM usuarios WHERE id_usuario='$id_usuario'";
+$sql = "SELECT * FROM publicaciones WHERE id_publicacion='$id_publicacion'";
 $rec = mysqli_query($conn, $sql);
 $row = mysqli_fetch_object($rec);
 
  echo "Desea Eliminar a ";
- echo $nombre = $row->{'nombre'};
- echo " "; echo $apellido = $row->{'apellido'};
+ echo $id_publicacion = $row->{'id_publicacion'};
 
  echo " ? ";
 
 ?>
 
-<input type="hidden" id="id_usuario" value="<?php echo $id_usuario; ?>">
+<input type="hidden" id="id_publicac" value="<?php echo id_publicacion; ?>">

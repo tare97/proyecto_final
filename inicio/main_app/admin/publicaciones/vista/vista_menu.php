@@ -21,10 +21,12 @@
 
 	<script type="text/javascript" src="../librerias/bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../librerias/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../controlador/control_usuario.js"></script>
-</head>
+	<script type="text/javascript" src="../controlador/control_publicaciones.js"></script>
+        <script src="../controlador/contarCaracteres.js"></script>
+</head> 
 <body>
 	<div>
+        <!--Barra superior-->
         <nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -42,54 +44,51 @@
                 </div>
             </div>
         </nav>
+        <!--Estructura central-->
         <div class="main-content">
         	<br>
         	<br>
         	<br>
         	<div class="row">
+                                <!--Formulario de regístro-->
 				<div class="col-lg-6 col-md-8 xs-12">
-					<h3 align="center"> Registro de datos </h3>
+					<h3 align="center"> Registro de publicaciones </h3>
 					<div id="panel_registro" align="center">
-						<!--Panel de datos-->
-						<table class="table table-condensed">
+                                            <!--Panel de datos-->
+                                            <form id="registro-public" action="../modelo/valida_foto.php" method="POST" enctype="multipart/form-data">
+                                                <table class="table table-condensed">
 							<tr>
 								<td>
-									<label>Nombre</label>
+									<label>Titulo</label>
 								</td>
 								<td>
-									<input type="text" id="nombre" class="form-control" placeholder="Introduce el Nombre">
+                                                                        <input type="text" id="titulo" class="form-control" name="txtnom" placeholder="Introduce el titulo deseado" value="">
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<label>Apellido</label>
+									<label>Tipo de publicacion</label>
 								</td>
 								<td>
-									<input type="text" id="apellido"class="form-control" placeholder="Introduce el Apellido">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label>correo</label>
-								</td>
-								<td>
-									<input type="email" id="correo"class="form-control" placeholder="Introduce el Correo">
+                                                                        Adquicisión <input type="radio" name="modo" value="compra"> 
+                                                                        Vista <input type="radio" name="modo" value="vista">
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<label>usuario</label>
+									<label>Imagen</label>
 								</td>
 								<td>
-									<input type="text" id="usuario"class="form-control" placeholder="Introduce el Usuario">
+                                                                        <input type="file"id="foto" class="form-control" name="foto" id="foto">
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<label>contraseña</label>
+									<label>Relato</label>
 								</td>
 								<td>
-									<input type="password" id="clave" class="form-control" placeholder="Introduce la Contraseña">
+                                                                        <textarea name="texto" id="texto" onpaste="contarcaracteres();" onkeyup="contarcaracteres();" placeholder="Introduce tu relato aquí..." maxlength="630"></textarea>
+                                                                        <div id="res">O caractere/s</div>
 								</td>
 							</tr>
 							<tr>
@@ -100,12 +99,14 @@
 							</tr>
 							<tr>
 								<td colspan="2" align="center">
-									<button class="btn btn-success btn-md" onclick="btn_guardar_dato();">Registrar</button>
+                                                                    <input class="btn btn-success" type="submit" id="regpublic" name="enviar" value="Regístrar"> 
 								</td>
 							</tr>
 						</table>
+                                            </form>
 					</div>
 				</div>
+                                <!--Panel de publicaciones donde se podra eliminar, y editar a demas de ver todos los elementos-->
 				<div class="col-md-6 col-md-8 xs-12">
 					<h3 align="center"> Listado de datos </h3>
 					<button class="btn btn-info btn-md" onclick="btn_listar_datos();"> Listar </button>
@@ -120,7 +121,7 @@
 </body>
 </html>
 
-<!-- Modal -->
+<!-- Modal seleccionar un elemento-->
 <div id="myModal_selector" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -132,20 +133,20 @@
       </div>
       <div class="modal-body">
         <p> Seleccion .</p>
-        <select class="form-control" id="select_usuario" onchange="select_usuario();">
+        <select class="form-control" id="select_publicacion" onchange="select_publicacion();">
         	<option value="">
         		Selecciona
         	</option>
         	<?php 
         		require '../conector/conexion.php';
 
-        		$sql_s = 'SELECT * FROM usuarios ORDER BY id_usuario';
+        		$sql_s = 'SELECT * FROM publicaciones ORDER BY id_publicacion';
 				$rec = mysqli_query($conn, $sql_s);
 				while ($row_s = mysqli_fetch_object($rec)){
-					$id_usuario = $row_s->{'id_usuario'};
-					$nombre = $row_s->{'nombre'};
+					$id_publicacion = $row_s->{'id_publicacion'};
+					$titulo = $row_s->{'titulo'};
 					?>
-					<option value="<?php echo $id_usuario; ?>"><?php echo $nombre; ?></option>
+					<option value="<?php echo $id_publicacion; ?>"><?php echo $titulo; ?></option>
 					<?php 
 				}
         	?>
