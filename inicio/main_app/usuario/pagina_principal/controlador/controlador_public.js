@@ -158,3 +158,34 @@ function btn_listar_comentarios(id_publicacion){
 		}
 	});
 }
+
+//CONTROLES PARA LOS LIKES.
+function darLike(id_publicacion){
+    var ob = {id_publicacion:id_publicacion};
+    $.ajax({
+        type: "POST",
+	url:"pagina_principal/modelo/modelo_dar_like.php",
+	data: ob,
+            beforeSend: function(objeto){
+
+            },
+            success: function(data){
+		alert(data);
+            }
+    });
+}
+
+function quitarLike(id_puntuacion){
+    var ob = {id_puntuacion:id_puntuacion};
+    $.ajax({
+        type: "POST",
+	url:"pagina_principal/modelo/modelo_quitar_like.php",
+	data: ob,
+            beforeSend: function(objeto){
+
+            },
+            success: function(data){
+		alert(data);
+            }
+    });
+}

@@ -24,8 +24,8 @@
         
         if($texto!=$_SESSION['custom_captcha'])
 	{
-	 $error = "INVALID CAPTCHA";
-	 alert ($error);
+	 $error = "CAPTCHA INVALIDO, INTENTELO DE NUEVO";
+	 echo $error;
 	 //you can use this var to show error invalid captcha
 	} else {
             if ($verificar == 0) {

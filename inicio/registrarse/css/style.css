@@ -20,6 +20,13 @@ body{
     width: 100%;
 }
 
+#logeos{
+    background-color:purple;
+    color:white;
+    text-align: center;
+    width: 100%;
+}
+
 /* Estilos para el título superior de la pagina */
 h1{
     color:#DFA01B;

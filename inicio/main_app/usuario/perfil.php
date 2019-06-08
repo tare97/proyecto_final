@@ -8,6 +8,27 @@
             <?php include('include/design-top.php'); ?>
             <?php include('include/navigation.php'); ?>
             <div class="main-content">
+                <!--Slider para la parte superior de l a pagína de perfil-->
+                <div class='slider'>
+                    <div class="ism-slider" data-transition_type="fade" data-play_type="loop" id="my-slider">
+                        <ol>
+                            <!--Imagen N*1-->
+                            <li>
+                                <!--Enlace de la imagen numero 1-->
+                                <img src="css/colored-pencils-686679_1280.jpg">
+                                <!--Titulo promocional en cada fotografía-->
+                                <div class="ism-caption ism-caption-0">EnjoyArt Application</div>
+                            </li>
+                            <!--Imagen N*2-->
+                            <li>
+                                <!--Enlace de la imagen numero 2-->
+                                <img src="css/font-705667_1280.jpg">
+                                <!--Titulo promocional en cada fotografía-->
+                                <div class="ism-caption ism-caption-0">EnjoyArt Application</div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
                 <!--Estructura de las publicaciones-->
                 <?php foreach (Rol::listar() as $fila) { ?>
                     <!--PUBLICACIONES-->

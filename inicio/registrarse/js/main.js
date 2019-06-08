@@ -121,6 +121,7 @@ function rcaptcha(){
 
 /* Regístro del usuario */
 function registro(){
+    event.preventDefault();
     if(rnombre() && rapellido() && rusuario() && rcorreo() && rclave() && rclavev() && rcaptcha()){
         $(document).ready(function(){
             var datos = $('#frmajax').serialize();
@@ -129,7 +130,7 @@ function registro(){
                 url: "guardar_datos/insertar.php",
                 data: datos,
                 success:function(r){
-                    alert(r);
+                    document.getElementById('logeos').innerHTML = r;
                 }
             });   
         });

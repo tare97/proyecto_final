@@ -52,14 +52,21 @@
                         <div class="row botones">
                             <!--Dos partes para los likes y a la para los comentarios-->
                             <div class="col-xs-6 likcom">
-                                <!--Likes-->
-                                <a href=""><span class="glyphicon glyphicon-heart"></span></a>
-                                <!--Comentarios (Estructura en la parte inferior)-->
-                                <?php
-                                //dato para conseguír el dato.
+                                <a href="#" onclick="darLike(<?php echo $res['id_publicacion']; ?>);"><img src="css/corazon_desactivo.png"></a>
+                                <?php 
+                                require_once 'conexion.php';
                                 $id_publicacion = $res['id_publicacion'];
+                                $sql3 = "SELECT * FROM puntuar WHERE id_publicacion = $id_publicacion";
+                                $rect2 = mysqli_query($conn, $sql3);
+                                while($res3 = mysqli_fetch_array($rect2)){
                                 ?>
-                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalcoment" onclick="btn_comentario('<?php echo $id_publicacion; ?>');"><span class="glyphicon glyphicon-comment"></span></button>    
+                                <!--Likes-->
+                                <a href="#" onclick="quitarLike(<?php echo $res3['id_puntuacion']; ?>);"><img src="css/corazon_activo.png"></a>
+                                <?php
+                                }
+                                ?>
+                                <!--Comentarios (Estructura en la parte inferior)-->
+                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalcoment" onclick="btn_comentario('<?php echo $res['id_publicacion']; ?>');"><span class="glyphicon glyphicon-comment"></span></button>    
                             </div>
                             <!--Y los botones de edicion, eiminacion o compra-->
                             <?php

@@ -60,8 +60,7 @@ CREATE TABLE `puntuar` (
   `id_puntuacion` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `id_usuario` int(11) COLLATE utf8_unicode_ci NOT NULL,
   `id_publicacion` int(11) COLLATE utf8_unicode_ci NOT NULL,
-  `puntuacion_positiva` int(11) COLLATE utf8_unicode_ci NOT NULL
-  `puntuacion_negativa` int(11) COLLATE utf8_unicode_ci NOT NULL
+  `puntuacion` boolean
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------

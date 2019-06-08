@@ -17,8 +17,9 @@
     </head>
     <body>
         <div id="errores"></div>
+        <div id="logeos"></div>
         <h1>EnjoyArt - Formulario de registro</h1>
-        <form id="frmajax" method="POST" class="form-register">
+        <form id="frmajax"  class="form-register">
             <h2 class="form__titulo">CREAR UNA CUENTA</h2>
             <div class="contenedor-inputs">
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre (2-19 Caracteres)" class="input-48" required >
@@ -30,7 +31,7 @@
                 <h3>Captcha:</h3>
                 <img src="captcha/captcha.php" id="capt">
                 <input type="text" id="confirmacion" name="captcha" placeholder="Introduce captcha">
-                <button  id="btnguardar">Guardar datos</button>
+                <button   id="btnguardar">Guardar datos</button>
                 <p class="form__link">¿Ya tienes cuenta? <a href="../index.php">Ingrese aquí</a></p>
             </div>
         </form>

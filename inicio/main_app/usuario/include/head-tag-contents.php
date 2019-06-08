@@ -41,6 +41,9 @@
         <script src="../usuario/pagina_principal/controlador/controlador_public.js"></script>
         <!--Enlace script para el contador de caracteres-->
         <script src="../usuario/nuevasPublicaciones/contarCaracteres.js"></script>
+        <!--Los archivos necearios para el slider-->
+        <link rel="stylesheet" href="../usuario/css/my-slider.css"/>
+        <script src="../usuario/js/ism-2.2.min.js"></script>
 
 
 
