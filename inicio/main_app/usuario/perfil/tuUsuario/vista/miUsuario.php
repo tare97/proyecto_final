@@ -14,6 +14,22 @@ session_start();
             <link rel="stylesheet" type="text/css" href="../css/estilos.css">
             <script src="../controlador/control_usuario.js"></script>
     </header>
+    <?php
+        //Estructura de php para conseguír los elementos para la edición-->
+        require '../../../conexion.php';
+
+        $sql = "SELECT * FROM usuarios WHERE id_usuario='" . $_SESSION['id_usuario'] . "'";
+        $rec = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_object($rec);
+        //Elementos que necesito.
+        $usuario = $row->{'usuario'};
+        $nombre = $row->{'nombre'};
+        $apellido = $row->{'apellido'};
+        $email = $row->{'email'};
+        $password = $row->{'password'};
+        $clave = base64_encode($password);
+        
+    ?>
     <body>
         <!--BARRA DE NAVEGACIÓN-->
         <nav class="navbar navbar-inverse">
@@ -45,19 +61,19 @@ session_start();
                                 <div class="form-group">
                                     <!--Nombre de usuario-->
                                     <label for="usuario">Usuario:</label>
-                                    <input type="text" class="form-control" id="usuario" placeholder="Usuario..." required>
+                                    <input type="text" class="form-control" id="usuario" value="<?php echo $usuario; ?>" placeholder="Usuario..." required>
                                     <!--Nombre y apellido-->
                                     <div class="row">
                                         <div class="col-md-12"><label for="nombre">Nombre y Apellido:</label></div>
-                                        <div class="col-sm-6"><input type="text" class="form-control nombre" id="nombre" placeholder="Nombre..." required></div>
-                                        <div class="col-sm-6"><input type="text" class="form-control apellido" id="apellido" placeholder="Apellido..." required></div>
+                                        <div class="col-sm-6"><input type="text" class="form-control nombre" id="nombre" value="<?php echo $nombre; ?>" placeholder="Nombre..." required></div>
+                                        <div class="col-sm-6"><input type="text" class="form-control apellido" id="apellido" value="<?php echo $apellido; ?>" placeholder="Apellido..." required></div>
                                     </div>
                                     <!--Correo electronico-->
                                     <label for="email">Correo electronico:</label>
-                                    <input type="email" class="form-control" id="correo" placeholder="correo electronico..." required>
+                                    <input type="email" class="form-control" id="correo" value="<?php echo $email; ?>" placeholder="correo electronico..." required>
                                     <!--Contraseña-->
                                     <label for="clave">Contraseña:</label>
-                                    <input type="password" class="form-control" id="clave" placeholder="contraseña..." required>      
+                                    <input type="text" class="form-control" id="clave" value="<?php echo $clave; ?>" placeholder="contraseña..." required>      
                                 </div>
                                 <button type="submit" class="btn btn-primary">Modíficar</button>
                             </form>

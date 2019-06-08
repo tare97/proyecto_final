@@ -41,7 +41,6 @@ body .panel-default.edicion{
     
     /* boton de edicion */
     .parte2 .edicion .btn-primary{
-        border: 2px solid black;
         width: 100px;
         margin-top: 20px;
         margin-left: 180px;
@@ -52,3 +51,9 @@ body .panel-default.eliminacion{
     margin: auto;
 }
 
+    /* boton de edicion */
+    .parte2 .eliminacion .btn-danger{
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 170px;
+    }
