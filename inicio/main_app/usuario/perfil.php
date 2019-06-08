@@ -15,14 +15,14 @@
                             <!--Imagen N*1-->
                             <li>
                                 <!--Enlace de la imagen numero 1-->
-                                <img src="css/colored-pencils-686679_1280.jpg">
+                                <img src="css/lapColr.jpg">
                                 <!--Titulo promocional en cada fotografía-->
                                 <div class="ism-caption ism-caption-0">EnjoyArt Application</div>
                             </li>
                             <!--Imagen N*2-->
                             <li>
                                 <!--Enlace de la imagen numero 2-->
-                                <img src="css/font-705667_1280.jpg">
+                                <img src="css/dibujo.jpg">
                                 <!--Titulo promocional en cada fotografía-->
                                 <div class="ism-caption ism-caption-0">EnjoyArt Application</div>
                             </li>

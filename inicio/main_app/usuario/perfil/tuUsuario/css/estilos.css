@@ -1,0 +1,54 @@
+/* ESTILOS PARA LA PAGÍNA DEL USUARIO */
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Titulo */
+body .container .parte1 h1{
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+    font-size: 50px;
+}
+
+body .container .parte2 {
+    margin: auto;
+    margin-top: 20px;
+    padding: 30px;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+/* Panel de edición */
+body .panel-default.edicion{
+    margin: auto;
+    height: 430px;
+}
+    
+    #panel_user{
+        margin-top:10px ;
+    }
+
+    /* Nombre y Apellido */
+    .parte2 .edicion .nombre{
+        width: 222px;
+    }
+    
+    .parte2 .edicion .apellido{
+        width: 222px;
+    }
+    
+    /* boton de edicion */
+    .parte2 .edicion .btn-primary{
+        border: 2px solid black;
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 180px;
+    }
+    
+/* Panel de eliminacion */
+body .panel-default.eliminacion{
+    margin: auto;
+}
+
