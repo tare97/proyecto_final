@@ -103,6 +103,40 @@ body{
     z-index:10;
 }
 
+    /* Informacion de contacto */
+    .footer .row .contact{
+        margin: auto;
+        margin-top: -35px;
+    }
+    
+    .footer .row .contact p{
+        text-align: center;
+        color: #0D688F;
+    }
+    
+    /* Informacion de la aplicacion */
+    .footer .row .info{
+        margin: auto;
+        margin-top: -35px;
+    }
+    
+    .footer .row .info p{
+        text-align: center;
+        color: #0D688F;
+    }
+    
+    /* redes sociales y rss */
+    .footer .row .redes{
+        margin: auto;
+        margin-top: -35px;
+        text-align: center;
+    }
+    
+    
+    .footer .row .redes img{
+       width: 25px;
+       height: 25px;
+    }
 
 
 /* Funcinamiento de la barra lateral */
@@ -246,7 +280,8 @@ body{
 }
 
 .comentario{
-    border: 2px solid black;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 /* PAGINA 2 - PERFIL */

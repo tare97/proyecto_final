@@ -1,7 +1,69 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/* MODIFICAR DATOS */
+function btn_editar(id_usuario){
+	var ob = {id_usuario:id_usuario};
+
+	$.ajax({
+		type: "POST",
+		url:"vista/vista_editar_datos.php",
+		data: ob,
+		beforeSend: function(objeto){
+
+		},
+		success: function(data){
+                    $("#elementos_modificar").html(data);
+		}
+	});
+}
+
+//guardar datos del usuario.
+function btn_editar_dato(id_usuario){
+    //Datos del usuario a modificar.
+    var usuario = $("#usuario").val();
+    var nombre = $("#nombre").val();
+    var apellido = $("#apellido").val();
+    var correo = $("#correo").val();
+    var clave = $("#clave").val();
+    var ob = {id_usuario:id_usuario, usuario:usuario, nombre:nombre, apellido:apellido, correo:correo, clave:clave};
+    $.ajax({
+        type: "POST",
+	url:"modelo/modelo_guardar_datos.php",
+	data: ob,
+        beforeSend: function(objeto){
+
+	},
+	success: function(data){
+            $("#panel_cambio_usuario").html(data);
+            setTimeout(function(){
+                $("#panel_cambio_usuario").html("");
+            },3000);
+        }
+    });
+}
 
 
+//ELIMINAR USUARIO.
+function btn_eliminar_usuario(id_usuario){
+
+	var ob = {id_usuario:id_usuario};
+
+	$.ajax({
+		type: "POST",
+		url:"modelo/modelo_eliminar_usuario.php",
+		data: ob,
+		beforeSend: function(objeto){
+
+		},
+		success: function(data){
+                        setTimeout(function(){
+				$("#eliminar_user").html(data);
+			},2500);
+
+			setTimeout(function(){
+				$("#eliminar_user").html("");
+			},3500);
+
+
+                        window.location="../../../../index.php";
+		}
+	});
+}

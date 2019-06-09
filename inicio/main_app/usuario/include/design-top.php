@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
           <!--Boton que muestra el nombre de usuario y el enlace para el panel de tu usuario-->
-          <li class="x"><a href="../usuario/perfil/tuUsuario/vista/miUsuario.php"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['login_user']; ?></a></li>
+          <li class="x"><a href="../usuario/perfil/tuUsuario/miUsuario.php"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['login_user']; ?></a></li>
           <!--Boton para salir fuera de la aplicación-->
           <li class="xa"><a href="../usuario/logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       </ul>

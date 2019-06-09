@@ -2,7 +2,25 @@
 body{
     margin: 0px;
     padding: 0px;
+    background-color: #0D688F;
+    background: url(azulecito.jfif) no-repeat center top;
+    background-size: cover;
 }
+
+/* Mensajes de edicion y eliminación */
+body #panel_cambio_usuario{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    background-color: green;
+}
+
+/* Barra de navegación */
+body .navbar-inverse{
+    background-color: #EBA521;
+    border: 1px solid #E79918;
+}
+
 
 /* Titulo */
 body .container .parte1 h1{
@@ -16,7 +34,8 @@ body .container .parte2 {
     margin: auto;
     margin-top: 20px;
     padding: 30px;
-    border: solid 2px black;
+    border: solid 2px #EBA521;
+    background-color: #0D688F;
     border-radius: 10px;
 }
 
@@ -39,10 +58,21 @@ body .panel-default.edicion{
         width: 222px;
     }
     
-    /* boton de edicion */
+    /* contraseña */
+    .parte2 .edicion .clave{
+        margin-top: 25px;
+    }
+    
+    /* boton de edicion 1*/
+    .parte2 .edicion .btn-success{
+        width: 100px;
+        margin-left: 180px;
+    }
+    
+    /* boton de edicion 2*/
     .parte2 .edicion .btn-primary{
         width: 100px;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: 180px;
     }
     
@@ -50,6 +80,11 @@ body .panel-default.edicion{
 body .panel-default.eliminacion{
     margin: auto;
 }
+
+    /* Texto de panel de eliminacion */
+    .parte2 .eliminacion h4{
+        text-align: center;
+    }
 
     /* boton de edicion */
     .parte2 .eliminacion .btn-danger{
