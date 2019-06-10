@@ -159,7 +159,6 @@ body{
 
 .abrir{
     transform: translateX(250px);
-    
 }
 
 /* PAGINA 1 - INDEX */
@@ -262,6 +261,11 @@ body{
     }
 
 /* estilos de los models */
+#panel_listado{
+    border: 2px solid black;
+    padding: 15px;
+}
+
 /*comentarios */
 .comentarioslist{
     border:1px solid #0D688F;

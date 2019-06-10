@@ -14,19 +14,24 @@
 <html>
 <head>
 	<title> Proyecto </title>
+        <!--CSS-->
+        <!--Librerias necesarias-->
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/glyphicons.css">
+        <!--Estilos propios-->
         <link rel="stylesheet" type="text/css" href="../css/estilos.css">
-
+        <!--JS-->
+        <!--Librerias necesarias-->
 	<script type="text/javascript" src="../librerias/bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../librerias/bootstrap/js/bootstrap.min.js"></script>
+        <!--Archivos propios-->
 	<script type="text/javascript" src="../controlador/control_publicaciones.js"></script>
         <script src="../controlador/contarCaracteres.js"></script>
 </head> 
 <body>
-	<div>
-        <!--Barra superior-->
+    <div>
+    <!--Barra superior-->
         <nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -46,78 +51,76 @@
         </nav>
         <!--Estructura central-->
         <div class="main-content">
-        	<br>
-        	<br>
-        	<br>
-        	<div class="row">
-                                <!--Formulario de regístro-->
-				<div class="col-lg-6 col-md-8 xs-12">
-					<h3 align="center"> Registro de publicaciones </h3>
-					<div id="panel_registro" align="center">
-                                            <!--Panel de datos-->
-                                            <form id="registro-public" action="../modelo/valida_foto.php" method="POST" enctype="multipart/form-data">
-                                                <table class="table table-condensed">
-							<tr>
-								<td>
-									<label>Titulo</label>
-								</td>
-								<td>
-                                                                        <input type="text" id="titulo" class="form-control" name="txtnom" placeholder="Introduce el titulo deseado" value="">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label>Tipo de publicacion</label>
-								</td>
-								<td>
-                                                                        Adquicisión <input type="radio" name="modo" value="compra"> 
-                                                                        Vista <input type="radio" name="modo" value="vista">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label>Imagen</label>
-								</td>
-								<td>
-                                                                        <input type="file"id="foto" class="form-control" name="foto" id="foto">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label>Relato</label>
-								</td>
-								<td>
-                                                                        <textarea name="texto" id="texto" onpaste="contarcaracteres();" onkeyup="contarcaracteres();" placeholder="Introduce tu relato aquí..." maxlength="630"></textarea>
-                                                                        <div id="res">O caractere/s</div>
-								</td>
-							</tr>
-							<tr>
-								<td colspan="2">
-									<hr>
-									<div id="panel_respuesta"></div>
-								</td>
-							</tr>
-							<tr>
-								<td colspan="2" align="center">
-                                                                    <input class="btn btn-success" type="submit" id="regpublic" name="enviar" value="Regístrar"> 
-								</td>
-							</tr>
-						</table>
-                                            </form>
-					</div>
-				</div>
-                                <!--Panel de publicaciones donde se podra eliminar, y editar a demas de ver todos los elementos-->
-				<div class="col-md-6 col-md-8 xs-12">
-					<h3 align="center"> Listado de datos </h3>
-					<button class="btn btn-info btn-md" onclick="btn_listar_datos();"> Listar </button>
-					<button class="btn btn-info btn-md"  data-toggle="modal" data-target="#myModal_selector"> Selector </button>
-					<div id="panel_listado" class="">
-						<!--Panel de datos-->
-					</div>
-				</div>
-			</div>    
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <!--Formulario de regístro-->
+                    <div class="col-lg-6 col-md-8 xs-12">
+                        <h3 align="center"> Registro de publicaciones </h3>
+                        <div id="panel_registro" align="center">
+                            <!--Panel de datos-->
+                            <form id="registro-public" action="../modelo/valida_foto.php" method="POST" enctype="multipart/form-data">
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td>
+                                            <label>Titulo</label>
+					</td>
+					<td>
+                                            <input type="text" id="titulo" class="form-control" name="txtnom" placeholder="Introduce el titulo deseado" value="">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>Tipo de publicacion</label>
+                                        </td>
+                                        <td>
+                                            Adquicisión <input type="radio" name="modo" value="compra"> 
+                                            Vista <input type="radio" name="modo" value="vista">
+					</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>Imagen</label>
+                                        </td>
+                                        <td>
+                                            <input type="file"id="foto" class="form-control" name="foto" id="foto">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>Relato</label>
+                                        </td>
+                                        <td>
+                                            <textarea name="texto" id="texto" onpaste="contarcaracteres();" onkeyup="contarcaracteres();" placeholder="Introduce tu relato aquí..." maxlength="630"></textarea>
+                                            <div id="res">O caractere/s</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <hr>
+                                            <div id="panel_respuesta"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" align="center">
+                                            <input class="btn btn-success" type="submit" id="regpublic" name="enviar" value="Regístrar"> 
+					</td>
+                                    </tr>
+				</table>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Panel de publicaciones donde se podra eliminar, y editar a demas de ver todos los elementos-->
+                    <div class="col-md-6 col-md-8 xs-12">
+                        <h3 align="center"> Listado de datos </h3>
+			<button class="btn btn-info btn-md" onclick="btn_listar_datos();"> Listar </button>
+			<button class="btn btn-info btn-md"  data-toggle="modal" data-target="#myModal_selector"> Selector </button>
+			<div id="panel_listado" class=""><!--Panel de datos--></div>
+                    </div>
+            </div>    
         </div>
-   	</div>
+    </div>
 </body>
 </html>
 
@@ -125,7 +128,7 @@
 <div id="myModal_selector" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
-    <!-- Modal content-->
+    <!--Contenido del modal-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -134,9 +137,7 @@
       <div class="modal-body">
         <p> Seleccion .</p>
         <select class="form-control" id="select_publicacion" onchange="select_publicacion();">
-        	<option value="">
-        		Selecciona
-        	</option>
+        	<option value="">Selecciona</option>
         	<?php 
         		require '../conector/conexion.php';
 
@@ -151,14 +152,11 @@
 				}
         	?>
         </select>
-        <div id="panel_selector">
-        	
-        </div>
+        <div id="panel_selector"></div>
       </div>
       <div class="modal-footer">
         <button type="button"  class="btn btn-danger" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
-
   </div>
 </div>

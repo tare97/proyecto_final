@@ -77,14 +77,14 @@ function btn_eliminar(id_publicacion){
 
 		},
 		success: function(data){
-			$("#panel_eliminar").html(data);
+                    $("#panel_eliminar").html(data);
 		}
 	});
 }
 
 function btn_eliminar_dato(){
-
-	var id_publicacion = $("#id_publicac").val();
+    
+        var id_publicacion = $("#id_publicacion").val();
 
 	var ob = {id_publicacion:id_publicacion};
 
