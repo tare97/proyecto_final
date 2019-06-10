@@ -52,6 +52,22 @@ body{
     background: #2a2a2a;
 }
 
+
+
+.sidebar h4{
+    border-top: 2px solid #0D688F;
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    background: #2a2a2a;
+}
+
+.sidebar h4 img{
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+}
+
 .sidebar ul{
     list-style: none;
     padding: 0;

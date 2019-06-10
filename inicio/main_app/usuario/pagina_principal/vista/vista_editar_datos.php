@@ -22,4 +22,4 @@ $row = mysqli_fetch_object($rec);
 <input type="text" class="form-control" id="titulo_ed" placeholder="* Titulo " value="<?php echo $titulo; ?>" required>
 
 <label for="texto">Relato</label>
-<textarea name="texto" id="texto_ed" placeholder="* relato breve " required><?php echo $texto; ?></textarea>
+<textarea name="texto" id="texto_ed" placeholder="* relato breve " maxlength="630" required><?php echo $texto; ?></textarea>

@@ -15,6 +15,13 @@ body #panel_cambio_usuario{
     background-color: green;
 }
 
+body #eliminar_user{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    background-color: red;
+}
+
 /* Barra de navegación */
 body .navbar-inverse{
     background-color: #EBA521;

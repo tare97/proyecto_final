@@ -170,7 +170,7 @@ function darLike(id_publicacion){
 
             },
             success: function(data){
-		alert(data);
+                window.location.reload();
             }
     });
 }
@@ -185,7 +185,7 @@ function quitarLike(id_puntuacion){
 
             },
             success: function(data){
-		alert(data);
+                window.location.reload();
             }
     });
 }

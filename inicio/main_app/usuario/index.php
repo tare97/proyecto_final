@@ -52,17 +52,27 @@
                         <div class="row botones">
                             <!--Dos partes para los likes y a la para los comentarios-->
                             <div class="col-xs-6 likcom">
-                                <a href="#" onclick="darLike(<?php echo $res['id_publicacion']; ?>);"><img src="css/corazon_desactivo.png"></a>
+                                <!--Parte de los likes-->
                                 <?php 
                                 require_once 'conexion.php';
                                 $id_publicacion = $res['id_publicacion'];
                                 $sql3 = "SELECT * FROM puntuar WHERE id_publicacion = $id_publicacion";
                                 $rect2 = mysqli_query($conn, $sql3);
-                                while($res3 = mysqli_fetch_array($rect2)){
-                                ?>
-                                <!--Likes-->
-                                <a href="#" onclick="quitarLike(<?php echo $res3['id_puntuacion']; ?>);"><img src="css/corazon_activo.png"></a>
-                                <?php
+                                //Si exíste en la array debe realizar el bucle:
+                                if(mysqli_num_rows($rect2)) {
+                                    while($res3 = mysqli_fetch_array($rect2)){
+                                        if ($res3['id_publicacion'] == $id_publicacion) {
+                                        ?>
+                                        <!--Likes-->
+                                        <a href="#" onclick="quitarLike(<?php echo $res3['id_puntuacion']; ?>);"><img src="css/corazon_activo.png"></a>
+                                        <?php
+                                        }
+                                    }
+                                //De lo contrario mostrara el boton vacio.
+                                } else {
+                                    ?>
+                                    <a href="#" onclick="darLike(<?php echo $res['id_publicacion']; ?>);"><img src="css/corazon_desactivo.png"></a>
+                                    <?php        
                                 }
                                 ?>
                                 <!--Comentarios (Estructura en la parte inferior)-->

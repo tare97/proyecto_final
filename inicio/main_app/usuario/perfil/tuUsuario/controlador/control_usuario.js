@@ -32,10 +32,13 @@ function btn_editar_dato(id_usuario){
 
 	},
 	success: function(data){
-            $("#panel_cambio_usuario").html(data);
+            setTimeout(function(){
+                $("#panel_cambio_usuario").html(data);
+            },1500);
+            
             setTimeout(function(){
                 $("#panel_cambio_usuario").html("");
-            },3000);
+            },2500);
         }
     });
 }
@@ -60,10 +63,13 @@ function btn_eliminar_usuario(id_usuario){
 
 			setTimeout(function(){
 				$("#eliminar_user").html("");
+			},3000);
+                        
+                        setTimeout(function(){
+				window.location="../../../../index.php";
 			},3500);
 
-
-                        window.location="../../../../index.php";
+                        
 		}
 	});
 }

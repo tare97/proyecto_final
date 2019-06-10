@@ -1,0 +1,38 @@
+﻿body {
+    position: relative;
+  }
+  ul.nav-pills {
+    top: 20px;
+    position: fixed;
+  }
+  div.col-8 div {
+    height: 860px;
+  }
+/*FONDO*/
+ .container-fluid{
+     background-color:darkorange;
+ }
+
+/* PRIMERA SECCION */
+#section1{
+    padding-top:80px;
+    padding-bottom:60px;
+}
+
+/* SEGUNDA SECCION */
+#section2, #section21, #section22, #section23 {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+/* TERCERA SECCION */
+#section3{
+    padding-top:80px;
+    padding-bottom:60px;
+}
+
+    /*color de letras(para la secciones)*/
+    .letras1{
+        color:#0A0B64;
+    }
+

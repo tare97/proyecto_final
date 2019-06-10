@@ -6,8 +6,8 @@ session_start();
         <!--Titulo de la pagína-->
         <title>EnjoyArt - Mi perfil</title>
         <!--Enlaces y librerías para el funcionamiento de la pagína-->
+        <link rel="stylesheet" type="text/css" href="../../librerias/bootstrap/css/glyphicons.css">
         <link rel="stylesheet" type="text/css" href="librerias/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="librerias/glyphicons.css">
         <script src="librerias/jquery.min.js"></script>
         <script src="librerias/bootstrap.min.js"></script>
             <!--Enlaces personales de js y css-->
