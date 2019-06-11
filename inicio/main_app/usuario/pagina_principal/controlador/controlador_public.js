@@ -29,8 +29,9 @@ function btn_eliminar_dato(){
 
 		},
 		success: function(data){
-			$("#panel_eliminar").html(data);
-			//btn_listar_datos();
+                        setTimeout(function(){
+                            $("#panel_eliminar").html(data);
+			},1500);
 
 			setTimeout(function(){
 				$("#panel_eliminar").html("");
@@ -80,17 +81,18 @@ function btn_guardar_edicion(){
 
 		},
 		success: function(data){
-			$("#panel_respuesta_edicion").html(data);
-
+                        $("#panel_respuesta_edicion").html(data);
+			
 			setTimeout(function(){
                             $("#panel_respuesta_edicion").html("");
-                        },3500);
+                        },2000);
 
                         setTimeout(function(){
                             $("#myModal_editar").modal("hide").fadeIn("slow");
-                        },3500);
+                            window.location.reload();
+                        },2500);
 
-                        window.location.reload();
+                        
 		}
 	});
 }
@@ -136,9 +138,8 @@ function btn_camentario_dato(){
                 setTimeout(function(){
                     $("#mas_comentario").html("");
                 },1500);
-                
                 comentario = "";
-                btn_listar_comentarios(id_publicacion)
+                btn_listar_comentarios(id_publicacion);
             }
 	});
 }
@@ -158,6 +159,12 @@ function btn_listar_comentarios(id_publicacion){
 		}
 	});
 }
+
+//Dinamismo de los likes
+//function cargarLike(){
+    //document.getElementById('recarga_like_si').innerHTML = "<a href=\"#\" onclick=\"darLike(<?php echo $res['id_publicacion']; ?>);\"><img src=\"css/corazon_desactivo.png\"></a>";
+//}
+
 
 //CONTROLES PARA LOS LIKES.
 function darLike(id_publicacion){
@@ -188,4 +195,62 @@ function quitarLike(id_puntuacion){
                 window.location.reload();
             }
     });
+}
+
+//FUNCION PARA COMPRAR
+function btn_compra(id_publicacion){
+    var ob = {id_publicacion:id_publicacion};
+
+	$.ajax({
+		type: "POST",
+		url:"pagina_principal/vista/vista_compra.php",
+		data: ob,
+		beforeSend: function(objeto){
+
+		},
+		success: function(data){
+                    $("#panel_compra").html(data);
+		}
+	});
+}
+
+function btn_comprar(){
+        var id_publicacion = $("#id_publicacion").val();
+        var precio = $("#precio").val();
+
+        var ob = {id_publicacion:id_publicacion, precio:precio};
+        
+	$.ajax({
+		type: "POST",
+		url:"pagina_principal/modelo/modelo_comprar_elemento.php",
+		data: ob,
+		beforeSend: function(objeto){
+
+		},
+		success: function(data){
+                    $("#panel_dato_compras").html(data);
+		}
+	});
+}
+
+function btn_cambio_elemento(id_publicacion){
+    var ob = {id_publicacion:id_publicacion};
+
+	$.ajax({
+		type: "POST",
+		url:"pagina_principal/modelo/transferir_compra.php",
+		data: ob,
+		beforeSend: function(objeto){
+
+		},
+		success: function(data){
+                    setTimeout(function(){
+                        window.location.href ="../../main_app/usuario/perfil.php";
+                        $("#panel_detalles").html(data);
+                    },1000);
+                    setTimeout(function(){
+                        $("#panel_detalles").html("");
+                    },2500);
+		}
+	});
 }

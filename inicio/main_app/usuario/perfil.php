@@ -7,6 +7,9 @@
 	<body>
             <?php include('include/design-top.php'); ?>
             <?php include('include/navigation.php'); ?>
+            <!--Div para mostrar mensaje de compra-->
+            <div id="panel_detalles"></div>
+            <!--Cuerpo de la pagína-->
             <div class="main-content">
                 <!--Slider para la parte superior de l a pagína de perfil-->
                 <div class='slider'>

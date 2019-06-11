@@ -99,3 +99,26 @@ body .panel-default.eliminacion{
         margin-top: 20px;
         margin-left: 170px;
     }
+    
+/* Panel de detalles de compra */
+body .panel-default.detalles-compra{
+    margin: auto;
+    margin-top: 25px;
+    width: auto;
+    height: auto;
+}
+
+    /* boton de mis compras */
+    .parte2 .detalles-compra .btn-info{
+        margin-top: 5px;
+        margin-left: 180px;
+    }
+    
+    
+    /* mostrar compras */
+    .parte2 .detalles-compra #elementos_comprados{
+        margin: auto;
+        padding: 10px;
+        font-size: 17px;
+        text-align: center;
+    }

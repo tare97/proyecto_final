@@ -6,7 +6,7 @@
             <!--Cabecera - Titulo y enlaces-->
             <?php include('include/head-tag-contents.php'); ?>
 	</head>
-	<body>
+        <body> <!--onload="cargarLike()"-->
             <!--Barra de navecación-->
             <?php include('include/design-top.php'); ?>
             <!--Barra lateral-->
@@ -64,6 +64,7 @@
                                         if ($res3['id_publicacion'] == $id_publicacion) {
                                         ?>
                                         <!--Likes-->
+                                        <!--<div id="recarga_like_no"></div>-->
                                         <a href="#" onclick="quitarLike(<?php echo $res3['id_puntuacion']; ?>);"><img src="css/corazon_activo.png"></a>
                                         <?php
                                         }
@@ -71,7 +72,8 @@
                                 //De lo contrario mostrara el boton vacio.
                                 } else {
                                     ?>
-                                    <a href="#" onclick="darLike(<?php echo $res['id_publicacion']; ?>);"><img src="css/corazon_desactivo.png"></a>
+                                        <a href="#" onclick="darLike(<?php echo $res['id_publicacion']; ?>);"><img src="css/corazon_desactivo.png"</a>
+                                        <!--<div id="recarga_like_si"></div>-->
                                     <?php        
                                 }
                                 ?>
@@ -96,7 +98,7 @@
                                 ?>
                                     <!--Botones para comprar-->
                                     <div class="col-xs-6 shop">
-                                        <button type="button" class="btn btn-success">Comprar</button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#myModal_compra" onclick="btn_compra('<?php echo $res['id_publicacion']; ?>');">Comprar</button>
                                     </div>
                                 <?php        
                                 }
@@ -169,6 +171,23 @@
                                     <button type="button" class="btn btn-info" onclick="btn_guardar_edicion();">Guardar</button>
                                     <button type="button" class="btn btn-danger" data-dismiss="modal" >Cerrar</button>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal para comprar elementos-->
+                    <div id="myModal_compra" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Contenido del modelo de eliminación-->
+                            <div class="modal-content">
+                                <div class="modal-header delet">
+                                    <h4 class="modal-title"> Compra de publicacion. </h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="panel_compra"></div>
+                                    <div id="panel_dato_compras"></div>
+                                </div>
+                                <!--Pie de pagína del modelo-->
+                                <div class="modal-footer"></div>
                             </div>
                         </div>
                     </div>

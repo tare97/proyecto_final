@@ -13,10 +13,16 @@
         //Elementos que necesito.
         $nombre = $row->{'nombre'};
         $apellido = $row->{'apellido'};
+        
+        //Defininos unas cualidades para que siempre,
+        // los dos elementos esten en minusculas 
+        // y con la primera letra en mayusculas.
+        $nombre_c = ucwords(strtolower($nombre));
+        $apellido_c = ucwords(strtolower($apellido));
     ?>
     <!--Enlaces dinamicos a lo largo de la pagína-->
     <h2>Menú.</h2>
-    <h4><img src="../usuario/css/circulo_conectado.png"> Conectado: <?php echo $nombre; ?>, <?php echo $apellido; ?>.</h4>
+    <h4><img src="../usuario/css/circulo_conectado.png"> Conectado: <?php echo $nombre_c; ?>, <?php echo $apellido_c; ?>.</h4>
     <ul>
         <li class="">
            <a class=" <?php if($CURRENT_PAGE == "Index"){ ?> active <?php } ?>" href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a>

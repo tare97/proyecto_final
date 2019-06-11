@@ -73,3 +73,17 @@ function btn_eliminar_usuario(id_usuario){
 		}
 	});
 }
+
+/* DETALLES DE MIS COMPRAS */
+function btn_mis_compras(){
+	$.ajax({
+		type: "POST",
+		url:"vista/vista_mostrar_compras.php",
+		beforeSend: function(objeto){
+
+		},
+		success: function(data){
+                    $("#elementos_comprados").html(data);
+		}
+	});
+}
