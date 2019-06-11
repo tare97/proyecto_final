@@ -64,6 +64,8 @@
                         </div>
                         <div class="row botones">
                             <div class="col-xs-12">
+                                <!--Botones de eliminacion y de edicion-->
+                                <!--Nota: el base64_encode es una manera de codificar los datos-->
                                 <a class="btn btn-primary" href="perfil/vistas/roles/editar.php?id=<?=base64_encode($fila[0])?>">Editar</a>
                                 <a class="btn btn-danger" href="perfil/controladores/Roles.php?a=elim&id=<?=base64_encode($fila[0])?>" onclick="return confirm('¿Desea eliminar?')">Eliminar</a>
                             </div>

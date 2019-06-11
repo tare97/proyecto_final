@@ -39,9 +39,10 @@ function btn_eliminar_dato(){
 
 			setTimeout(function(){
 				$("#myModal_eliminar").modal("hide").fadeIn("slow");
+                                window.location.reload();
 			},2500);
 
-                        window.location.reload();
+                        
 		}
 	});
 }
@@ -110,7 +111,7 @@ function btn_comentario(id_publicacion){
 		},
 		success: function(data){
 			$("#panel_comentario").html(data);
-                        btn_listar_comentarios(id_publicacion)
+                        btn_listar_comentarios(id_publicacion);
 		}
 	});
 }
@@ -138,7 +139,7 @@ function btn_camentario_dato(){
                 setTimeout(function(){
                     $("#mas_comentario").html("");
                 },1500);
-                comentario = "";
+                
                 btn_listar_comentarios(id_publicacion);
             }
 	});

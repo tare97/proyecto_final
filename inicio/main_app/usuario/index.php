@@ -72,13 +72,13 @@
                                 //De lo contrario mostrara el boton vacio.
                                 } else {
                                     ?>
-                                        <a href="#" onclick="darLike(<?php echo $res['id_publicacion']; ?>);"><img src="css/corazon_desactivo.png"</a>
+                                        <a href="#" onclick="darLike(<?php echo $res['id_publicacion']; ?>);"><img src="css/corazon_desactivo.png"></a>
                                         <!--<div id="recarga_like_si"></div>-->
                                     <?php        
                                 }
                                 ?>
                                 <!--Comentarios (Estructura en la parte inferior)-->
-                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalcoment" onclick="btn_comentario('<?php echo $res['id_publicacion']; ?>');"><span class="glyphicon glyphicon-comment"></span></button>    
+                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalcoment" onclick="btn_comentario(<?php echo $res['id_publicacion']; ?>);"><span class="glyphicon glyphicon-comment"></span></button>    
                             </div>
                             <!--Y los botones de edicion, eiminacion o compra-->
                             <?php
@@ -114,7 +114,7 @@
                     <div class="modal fade" id="myModalcoment" role="dialog">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
-                                <div class="modal-header">
+                                <div class="modal-header cabe-coment">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     <h4 class="modal-title">Panel de comentarios</h4>
                                 </div>
@@ -126,7 +126,7 @@
                                         <!--Panel de los comentarios a listar-->
                                     </div>
                                 </div>
-                                <div class="modal-footer">
+                                <div class="modal-footer fot-coment">
                                     
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                 </div>
@@ -146,7 +146,7 @@
                                     <div id="panel_eliminar"></div>
                                 </div>
                                 <!--Pie de pagína del modelo-->
-                                <div class="modal-footer">
+                                <div class="modal-footer delet">
                                     <button type="button" class="btn btn-info" onclick ="btn_eliminar_dato();">Eliminar</button>
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                                 </div>
@@ -167,7 +167,7 @@
                                     <div id="panel_respuesta_edicion"></div>
                                 </div>
                                 <!--Pie de pagína del model-->
-                                <div class="modal-footer">
+                                <div class="modal-footer edit">
                                     <button type="button" class="btn btn-info" onclick="btn_guardar_edicion();">Guardar</button>
                                     <button type="button" class="btn btn-danger" data-dismiss="modal" >Cerrar</button>
                                 </div>

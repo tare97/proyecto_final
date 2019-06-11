@@ -267,6 +267,17 @@ body{
 }
 
 /*comentarios */
+    /* colores de cabecera y footer del model comentarios */
+    .modal-header.cabe-coment{
+        background-color: #0D688F;
+        opacity: 0.9;
+    }
+    
+    .modal-footer.fot-coment{
+        background-color: #0D688F;
+        opacity: 0.9;
+    }
+
 .comentarioslist{
     border:1px solid #0D688F;
     margin: auto;
@@ -304,6 +315,26 @@ body{
     margin-bottom: 50px;
 }
 
+/* model edicion */
+    .modal-header.edit{
+        background-color: #0D688F;
+        opacity: 0.9;
+    }
+    
+    .modal-footer.edit{
+        background-color: #0D688F;
+        opacity: 0.9;
+    }
+
+/* model eliminar */    
+    .modal-header.delet{
+        background-color: #F46C51;
+    }
+    
+    .modal-footer.delet{
+        background-color: #F46C51;
+    }
+    
 /* PAGINA 2 - PERFIL */
 .public-perfil{
     border: 5px solid #0D688F;
