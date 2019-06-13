@@ -1,3 +1,4 @@
+//Funcion del boton para guardar el nuevo usuario */
 function btn_guardar_dato(){
 	var nombre = $("#nombre").val();
 	var apellido = $("#apellido").val();
@@ -5,8 +6,6 @@ function btn_guardar_dato(){
 	var usuario = $("#usuario").val();
 	var clave = $("#clave").val();
 	var tipo = "admin";
-
-	//alert(nombre+" "+apellido+" "+correo+" "+usuario+" "+clave);
 
 	var ob = {nombre:nombre, apellido:apellido, correo:correo, usuario:usuario, clave:clave, tipo:tipo};
 
@@ -30,7 +29,7 @@ function btn_guardar_dato(){
 	});
 }	
 
-
+//Funcion muy importante para listar los elementos de la base de datos.
 function btn_listar_datos(){
 	
 	var ob = "";
@@ -48,6 +47,7 @@ function btn_listar_datos(){
 	});
 }	
 
+//Funcion para la vista de la edicion de usuarios.
 function btn_editar(id_usuario){
 	var ob = {id_usuario:id_usuario};
 
@@ -63,7 +63,7 @@ function btn_editar(id_usuario){
 		}
 	});
 }
-
+//Funcion para guardar la edicion de un usuario.
 function btn_guardar_edicion(){
 
 	var id_usuario = $("#id_usuario").val();
@@ -101,7 +101,7 @@ function btn_guardar_edicion(){
 		}
 	});
 }
-
+//Funcion para mostrar la vista de el modal de eliminacion.
 function btn_eliminar(id_usuario){
 	var ob = {id_usuario:id_usuario};
 
@@ -117,7 +117,7 @@ function btn_eliminar(id_usuario){
 		}
 	});
 }
-
+//Funcion para eliminar un usuario.
 function btn_eliminar_dato(){
 
 	var id_usuario = $("#id_usuario").val();
@@ -149,7 +149,7 @@ function btn_eliminar_dato(){
 		}
 	});
 }
-
+//Funcion para el boton de seleccion de un usuario.
 function select_usuario(){
 	//id="select_usuario"
 	var id_usuario = $("#select_usuario").val();

@@ -1,4 +1,5 @@
 <?php
+    //Varíable necesaria para usar sesiones.
     session_start();
     // Estructura de seguridad para que no se puede acceder introduciendo la url.
     error_reporting(0);
@@ -13,28 +14,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <!--Titulo de la pagína-->
 	<title> Proyecto </title>
+        <!--Librerias necesarias CSS, JS...-->
+        <!--CSS-->
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="../librerias/bootstrap/css/glyphicons.css">
-        <link rel="stylesheet" type="text/css" href="../css/estilos.css">
-
-	<script type="text/javascript" src="../librerias/bootstrap/js/jquery.min.js"></script>
+        <!--JS-->
+        <script type="text/javascript" src="../librerias/bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../librerias/bootstrap/js/bootstrap.min.js"></script>
+        <!--Archivos propios-->
+        <link rel="stylesheet" type="text/css" href="../css/estilos.css">
 	<script type="text/javascript" src="../controlador/control_usuario.js"></script>
 </head>
 <body>
-	<div>
+    <div>
+        <!--Barra de navegacion superior-->
         <nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
             <div class="container-fluid">
+                <!--Titulo de la barra de navegacion-->
                 <div class="navbar-header">
                     <a class="navbar-brand" href="vista_menu.php">Panel de Administración de Usuarios</a>
                 </div>
+                <!--Enlaces de navegacion (Usuarios y publicaciones.)-->
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">USUARIOS</a></li>
                     <li><a href="../../publicaciones/masPublic.html">PUBLICACIONES</a></li>
                 </ul>
                 <div id="navbar" class="collapse navbar-collapse">
+                  <!--Nombre del usuario administrador y boton para salir de la seccion de administracion-->
                   <ul class="nav navbar-nav navbar-user navbar-right">
                     <li><a href="vista_menu.php"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['login_user']; ?></a></li>
                     <li><a href="../../logout.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
@@ -42,11 +51,16 @@
                 </div>
             </div>
         </nav>
+        <!--CONTENIDO PRINCIPAL-->
         <div class="main-content">
+                <!--Distanciador de espacios-->
         	<br>
         	<br>
         	<br>
+                <br>
+                <br>
         	<div class="row">
+                                <!--Panel de registro de usuarios-->
 				<div class="col-lg-6 col-md-8 xs-12">
 					<h3 align="center"> Registro de datos </h3>
 					<div id="panel_registro" align="center">
@@ -106,28 +120,30 @@
 						</table>
 					</div>
 				</div>
+                                <!--Bonotes para listar los elementos de la base de datos-->
 				<div class="col-md-6 col-md-8 xs-12">
 					<h3 align="center"> Listado de datos </h3>
 					<button class="btn btn-info btn-md" onclick="btn_listar_datos();"> Listar </button>
 					<button class="btn btn-info btn-md"  data-toggle="modal" data-target="#myModal_selector"> Selector </button>
 					<div id="panel_listado" class="">
-						<!--Panel de datos-->
+						<!--Panel de datos(Localizado en una vista-->
 					</div>
 				</div>
 			</div>    
         </div>
-   	</div>
+    </div>
 </body>
 </html>
-
-<!-- Modal -->
+<!--MODELS DE MOFICACION, ELIMINACION Y SELECTOR-->
+<!-- Modal de seleccion-->
 <div id="myModal_selector" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
-    <!-- Modal content-->
+    <!--Contenido del modal-->
     <div class="modal-content">
       <div class="modal-header">
+        <!--Boton x para cerrar el modle-->
         <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <!--Titulo-->
         <h4 class="modal-title"> Selector. </h4>
       </div>
       <div class="modal-body">
@@ -136,6 +152,7 @@
         	<option value="">
         		Selecciona
         	</option>
+                <!--PHP para conseguir los datos de la base de datos y poder seleccionarlos en el selector-->
         	<?php 
         		require '../conector/conexion.php';
 
@@ -151,13 +168,13 @@
         	?>
         </select>
         <div id="panel_selector">
-        	
+            <!--Mensajes de error o panel con elementos del usuario-->
         </div>
       </div>
+      <!--Pie de pagína y boton de cerrar-->
       <div class="modal-footer">
         <button type="button"  class="btn btn-danger" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
-
   </div>
 </div>
