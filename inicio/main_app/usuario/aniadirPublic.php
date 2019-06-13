@@ -8,7 +8,7 @@
 		<?php include('include/design-top.php'); ?>
 		<?php include('include/navigation.php'); ?>
 		<div class="main-content">	
-                    <form id="registro-public" action="valida_foto.php" method="POST" enctype="multipart/form-data">
+                    <form id="registro-public" action="nuevasPublicaciones/valida_foto.php" method="POST" enctype="multipart/form-data">
                         <h2>REGÍSTRO DE PUBLICACIÓN</h2>
                         <input type="text" name="txtnom" placeholder="Introduce el titulo deseado" value="">
                         Adquicisión <input type="radio" name="modo" value="compra"> 

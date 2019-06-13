@@ -11,9 +11,9 @@
         <div class="col-xs-3 redes">
                 <p>
                     <a href="include/rss/rss-publicaciones.php"><img src="../usuario/librerias/bootstrap/fonts/rss-logo.jpg"></a>
-                    <a href="#"><img src="../usuario/librerias/bootstrap/fonts/facebook-logo.png"></a>
+                    <a href="https://www.facebook.com/tarek.bachiri.754"><img src="../usuario/librerias/bootstrap/fonts/facebook-logo.png"></a>
                     <a href="https://www.instagram.com/enjoyart.es/"><img src="../usuario/librerias/bootstrap/fonts/instagram-social-logo.png"></a>
-                    <a href="https://twitter.com/EnjoyArt3"><img src="../usuario/librerias/bootstrap/fonts/twitter-logo.png"></a>
+                    <a href="https://twitter.com/EnjoyArt5"><img src="../usuario/librerias/bootstrap/fonts/twitter-logo.png"></a>
                 </p>
         </div>
     </div>    

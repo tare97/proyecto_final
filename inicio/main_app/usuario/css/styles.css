@@ -1,12 +1,12 @@
-/* Estilos de la pagína */
-/* El cuerpo de la pagína */
+/* Estilos de la pagínas */
+/* El cuerpo de la pagínas */
 body{
     margin: 0px;
     margin-bottom: 40px;
     overflow: hidden;
 }
 
-/* Barra de navegación */
+/* Barra de navegación superior */
 .navbar-inverse{
     background: #EBA521;
     border: 2px solid #E79918;
@@ -95,19 +95,8 @@ body{
     color: #0D688F;
 }
 
-.main-content{
-    width: 100%;
-    height: 81%;
-    position: absolute;
-    z-index:10;
-    background:url(fondo-user.jpg) no-repeat center bottom;
-    background-size: cover;
-    margin-top: -23px; 
-    transition: all 0.5s;
-    overflow-x: hidden;
-    box-sizing: border-box;
-}
 
+/* Estilos del pie de pagína */
 .footer{
     width: 100%;
     height: 10%;
@@ -155,15 +144,29 @@ body{
     }
 
 
-/* Funcinamiento de la barra lateral */
+/* Funcinamiento de la barra lateral (Que se abra y se cierre sin que se rompa la estructura) */
 
 .abrir{
     transform: translateX(250px);
 }
 
 /* PAGINA 1 - INDEX */
-/* Estilos para las publicaciones */
 
+/* Estilos de la estructura central */
+.main-content{
+    width: 100%;
+    height: 81%;
+    position: absolute;
+    z-index:10;
+    background:url(fondo-user.jpg) no-repeat center bottom;
+    background-size: cover;
+    margin-top: -23px; 
+    transition: all 0.5s;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+/* Estilos para las publicaciones */
 .publicacion{
     border: 5px solid #0D688F;
     box-sizing: border-box;
@@ -423,6 +426,7 @@ body{
     
     
 /* PAGINA 3 - REGISTRO DE NUEVAS PUBLICACIONES */
+
 /* Estilos para el panel de regístro */
 #registro-public{
     width: 450px;
