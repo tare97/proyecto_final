@@ -1,18 +1,20 @@
 <?php
+//Vaiable para usar sessiones.
 session_start();
+// Datos resivido de el ajax.
 $id_publicacion = $_POST['id_publicacion'];
 $precio = $_POST['precio'];
 
-
-
+//Conexion con la base de datos.
 require '../../conexion.php';
-
+//Consulta.
 $sql = 'SELECT * FROM comprar';
 $rec = mysqli_query($conn, $sql);
 
-
+//Consulta para insertar nuevo dato.
 $sql1 = "INSERT INTO `comprar`(`id_usuario`, `id_publicacion`, precio) VALUES (" . $_SESSION['id_usuario'] . ", $id_publicacion, $precio)";
 $reg = mysqli_query($conn, $sql1);
+//Condición.
 if ($reg == TRUE) {
         ?>
         <br>

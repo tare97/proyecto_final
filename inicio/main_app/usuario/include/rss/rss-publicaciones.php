@@ -11,10 +11,10 @@ $servername = "localhost";
 $username = "root";
 $password = "admin";
 
-// Create connection
+// Crear la conexion.
 $conn = new mysqli($servername, $username, $password);
 
-// Check connection
+// Chequear la conexion.
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
@@ -40,7 +40,7 @@ function sanitize($str) {
 
 
 
-
+//Consulta
 $sql = "SELECT * FROM publicaciones ORDER BY fecha_creacion DESC LIMIT 12";
 
 

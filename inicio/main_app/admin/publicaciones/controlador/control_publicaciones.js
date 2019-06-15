@@ -1,3 +1,4 @@
+//Funcion muy importante para listar los elementos de la base de datos.
 function btn_listar_datos(){
 	
 	var ob = "";
@@ -14,7 +15,7 @@ function btn_listar_datos(){
 		}
 	});
 }	
-
+//Funcion para la vista de la edicion de las publicaciones.
 function btn_editar(id_publicacion){
 	var ob = {id_publicacion:id_publicacion};
 
@@ -30,14 +31,12 @@ function btn_editar(id_publicacion){
 		}
 	});
 }
-
+//Funcion para guardar la edicion de una publicacion.
 function btn_guardar_edicion(){
 
 	var id_publicacion = $("#id_publicacion").val();
 	var titulo = $("#titulo_ed").val();
 	var texto = $("#texto_ed").val();
-
-	//alert(nombre+" "+apellido+" "+correo+" "+usuario+" "+clave);
 
 	var ob = {id_publicacion:id_publicacion, titulo:titulo, texto:texto};
 
@@ -65,7 +64,7 @@ function btn_guardar_edicion(){
 		}
 	});
 }
-
+//Funcion para mostrar la vista de el modal de eliminacion.
 function btn_eliminar(id_publicacion){
 	var ob = {id_publicacion:id_publicacion};
 
@@ -81,7 +80,7 @@ function btn_eliminar(id_publicacion){
 		}
 	});
 }
-
+//Funcion para eliminar un usuario.
 function btn_eliminar_dato(){
     
         var id_publicacion = $("#id_publicacion").val();
@@ -112,11 +111,10 @@ function btn_eliminar_dato(){
 		}
 	});
 }
-
+//Funcion para el boton de seleccion de un usuario.
 function select_publicacion(){
-	//id="select_usuario"
 	var id_publicacion = $("#select_publicacion").val();
-	//alert("hola mundo = " + id_usuario);
+
 
 	var ob = {id_publicacion:id_publicacion};
 

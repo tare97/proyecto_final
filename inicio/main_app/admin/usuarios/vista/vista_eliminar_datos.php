@@ -3,7 +3,7 @@
 $id_usuario = $_POST['id_usuario'];
 //conexion con la base de datos.
 require '../conector/conexion.php';
-//Consulta: Seleccionar todos los elementos de la tabla usuarios mientras el id sea el resivido del ajax.
+//Consulta: Seleccionar todos los elementos de la tabla usuarios mientras el id sea el recivido del ajax.
 $sql = "SELECT * FROM usuarios WHERE id_usuario='$id_usuario'";
 //Envia la consulta a la base datos.
 $rec = mysqli_query($conn, $sql);

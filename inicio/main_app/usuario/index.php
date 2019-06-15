@@ -12,7 +12,9 @@
             <!--Barra lateral-->
             <?php include('include/navigation.php'); ?>
             <!--Cuerpo de la pagína-->
-            <div  class="main-content">	
+            <div  class="main-content">
+                <!--Breadcrumb-->
+                <div class="migaDePan">Home > Publicaciones.</div>
                 <!--Codificación para la aparición en bucle de las publicaciones-->
                 <?php
                 require_once 'conexion.php';

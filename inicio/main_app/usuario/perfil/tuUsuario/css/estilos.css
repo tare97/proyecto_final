@@ -1,4 +1,14 @@
 /* ESTILOS PARA LA PAGÍNA DEL USUARIO */
+/* Estilos para las migas de pan */
+.migaDePan{
+    background-color: #0D688F;
+    padding: 10px;
+    margin-top: -21px;
+    font-size: 20px;
+    color: #EBA521;
+    cursor: pointer;
+}
+
 body{
     margin: 0px;
     padding: 0px;

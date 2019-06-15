@@ -1,27 +1,20 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 29-may-2019, 13:53:16
-    Author     : tarek
-*/
-
+/* Estilos de la pagína de administración de las publicaicones */
 .main-content .row{
     margin: 0px; padding: 0px;
 }
 
+/*Estilo para el panel de regístro de las publicaciones */
 #panel_registro{
     padding: 5%; 
     box-shadow: 1px 2px 2px #A4A4A4; 
     border:1px solid #A4A4A4;
 }
-
+/* Estilos de la parte interna de el panel de regístro */
 .table-condensed{
     width: 70%;
 }
-
+/* Estilo de los modals */
+/* Cabecera del modal */
 div.modal-header{
     background-color: #084B8A; 
     color:white;
@@ -31,22 +24,23 @@ div.modal-header{
 .btn-primary.btn-xs{
     width: 100%;
 }
-
+/* Boton de salir del modal */
 .btn-danger.btn-xs{
     width: 100%; 
     margin-top: 1%;
 }
-
+/* model edicion */
 .edit{
     background-color: #084B8A; 
     color:white;
 }
-
+/* Cabecera del model de eliminacion */
 .modal-header.delet{
     background-color: red; 
     color:white;
 }
 
+/*Estilos para los textarea */
 #texto{
     width: 400px;
     height: 200px;

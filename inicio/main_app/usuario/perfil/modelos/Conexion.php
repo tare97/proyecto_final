@@ -1,4 +1,5 @@
 <?php
+// CONEXION CON LA BASE DE DATOS.
 class Conexion {
 	private $conexion;
 

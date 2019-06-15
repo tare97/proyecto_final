@@ -16,8 +16,10 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <!--Mensajes de error-->
         <div id="errores"></div>
         <div id="logeos"></div>
+        <!--fORMULARIO DE REGÍSTRO-->
         <h1>EnjoyArt - Formulario de registro</h1>
         <form id="frmajax"  class="form-register">
             <h2 class="form__titulo">CREAR UNA CUENTA</h2>

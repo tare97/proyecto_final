@@ -1,6 +1,7 @@
 <?php
+// Dato resivido de el ajax.
 $id_usuario = $_POST['id_usuario'];
-
+// conexion con la base de datos.
 require '../../../conexion.php';
 
 $sql = "SELECT * FROM usuarios WHERE id_usuario='$id_usuario'";

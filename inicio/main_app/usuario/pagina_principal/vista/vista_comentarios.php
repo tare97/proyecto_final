@@ -1,10 +1,10 @@
 <?php
-
+// Dato resivido de el ajax.
 $id_publicacion = $_POST['id_publicacion'];
 
 
 ?>
-<!--Estructura de lo que aparecera en el panel model-->
+<!--Estructura de lo que aparecera en el panel model de los comentarios-->
 <br>
 <br>
 <input type="hidden" id="id_publicacion" value="<?php echo $id_publicacion; ?>"></input>

@@ -1,7 +1,9 @@
 <?php
+        //variable para usar sesiones
         session_start();
+        //obtenemos la conexion con la base de datos.
 	require('conexion.php');
-
+        // datos a guardar o verificar.
 	$usuario = $_POST['usuario'];
 	$nombre = $_POST['nombre'];
 	$apellido = $_POST['apellido'];
@@ -9,9 +11,8 @@
 	$password = $_POST['password'];
 	$pw_encrip = md5($password);
         $texto = $_POST['captcha'];
-	//$pw_encrip = password_hash($password, PASSWORD_DEFAULT);
 	$password2 = $_POST['password2'];
-
+        //Consulta: Selecionamos todos os datos de la tabla usuarios.
 	$sql1 = 'SELECT * FROM usuarios';
 	$rec = mysqli_query($conn, $sql1);
 	$verificar = 0;
@@ -26,7 +27,7 @@
 	{
 	 $error = "CAPTCHA INVALIDO, INTENTELO DE NUEVO";
 	 echo $error;
-	 //you can use this var to show error invalid captcha
+	 //Error del captchar.
 	} else {
             if ($verificar == 0) {
                 $sql2="INSERT into usuarios (usuario, nombre, apellido, password, tipo_usuario, email)

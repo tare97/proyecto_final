@@ -1,12 +1,13 @@
 <?php
 require_once 'Conexion.php';
+//Funcion para usar sessiones.
 session_start();
-
+//Nueva clase.
 class Rol {
 	public $id;
 	public $titulo;
 	private $conexion;
-
+        //Constructor.
 	public function __construct () {
 		$this->id = 0;
 		$this->titulo = '';

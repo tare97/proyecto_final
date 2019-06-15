@@ -31,6 +31,8 @@ session_start();
                 </ul>
             </div>
         </nav>
+        <!--Breadcrumb-->
+        <div class="migaDePan">Perfíl > Panel de Perfíl.</div>
         <!--Contenido de la pagína-->
         <div class="container">
             <div class="row parte1">

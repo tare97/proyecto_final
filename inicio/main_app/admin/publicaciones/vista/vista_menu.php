@@ -1,4 +1,5 @@
 <?php
+    //Varíable necesaria para usar sesiones.
     session_start();
     // Estructura de seguridad para que no se puede acceder introduciendo la url.
     error_reporting(0);

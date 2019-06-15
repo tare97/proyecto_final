@@ -11,6 +11,8 @@
             <div id="panel_detalles"></div>
             <!--Cuerpo de la pagína-->
             <div class="main-content">
+                <!--Breadcrumb-->
+                <div class="migaDePan">Perfíl > Mis Publicaciones.</div>
                 <!--Slider para la parte superior de l a pagína de perfil-->
                 <div class='slider'>
                     <div class="ism-slider" data-transition_type="fade" data-play_type="loop" id="my-slider">

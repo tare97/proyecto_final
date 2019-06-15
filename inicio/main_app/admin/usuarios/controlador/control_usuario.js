@@ -73,7 +73,6 @@ function btn_guardar_edicion(){
 	var usuario = $("#usuario_ed").val();
 	var tipo = $("#tipo_ed").val();
 
-	//alert(nombre+" "+apellido+" "+correo+" "+usuario+" "+clave);
 
 	var ob = {id_usuario:id_usuario, nombre:nombre, apellido:apellido, correo:correo, usuario:usuario, tipo:tipo};
 
@@ -151,9 +150,7 @@ function btn_eliminar_dato(){
 }
 //Funcion para el boton de seleccion de un usuario.
 function select_usuario(){
-	//id="select_usuario"
 	var id_usuario = $("#select_usuario").val();
-	//alert("hola mundo = " + id_usuario);
 
 	var ob = {id_usuario:id_usuario};
 

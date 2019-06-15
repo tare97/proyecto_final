@@ -1,4 +1,4 @@
-<?php require_once '../modelos/Rol.php';
+<?php /* Conectar el archivo  rol.php cin este */ require_once '../modelos/Rol.php';
 
 $accion = $_POST['a'] ?? $_GET['a'] ?? '';
 
@@ -20,5 +20,5 @@ if ($accion != '') {
 			break;
 	}
 }
-
+//Seras reenviado a la pagína de perfíl.
 header('Location: ../../perfil.php');

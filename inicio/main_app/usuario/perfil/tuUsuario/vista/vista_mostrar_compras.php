@@ -1,6 +1,9 @@
 <?php
+//Funcion para usar sesiones.
 session_start();
+//Conexion con la base de datos.
 require_once '../../../conexion.php';
+// Dato resivido de el ajax.
 $id_usuario = $_SESSION['id_usuario'];
 
 

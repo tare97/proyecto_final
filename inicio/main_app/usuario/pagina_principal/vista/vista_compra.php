@@ -1,10 +1,9 @@
 <?php
-
+//Dato resivido del ajax.
 $id_publicacion = $_POST['id_publicacion'];
 
-
 ?>
-<!--Estructura de lo que aparecera en el panel model-->
+<!--Estructura de lo que aparecera en el panel model para la compra del elemento-->
 <input type="hidden" id="id_publicacion" value="<?php echo $id_publicacion; ?>"></input>
 <label for="texto">Introduzca el importe que desea a donar:</label>
 <input type="number" id="precio" placeholder="Introduce el importe..." min="0" max="10000" maxlength="0" required></input>

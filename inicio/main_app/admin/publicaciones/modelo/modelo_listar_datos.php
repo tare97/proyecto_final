@@ -1,3 +1,5 @@
+<!--Vista de publicaciones en la tabla-->
+<!--Parte superior de la vista de elementos-->
 <table class="table table-bordered">    
     <tr>
 	<th>#</th>
@@ -8,12 +10,15 @@
 	<th></th>
     </tr>
 <?php
+     //conexion con la base de datos.
     require '../conector/conexion.php';
-
+     //Consulta: Seleccionar todos los elementos de la tabla Ppublicaciones mientras el id sea el resivido del ajax.
     $sql = "SELECT * FROM publicaciones ORDER BY id_publicacion DESC";
+    //Envia la consulta a la base datos.
     $rec = mysqli_query($conn, $sql);
+    //Contador para listar los elementos.
     $i = 0;
-    
+    //rientado a objetos, recuperador de elementos de la base de datos.
     while ($row = mysqli_fetch_object($rec)){
         $i++;
         $id_publicacion = $row->{'id_publicacion'};
@@ -45,7 +50,7 @@
 <div id="myModal_editar" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
-    <!-- Modal content-->
+    <!-- Conrenido del modal -->
     <div class="modal-content">
       <div class="modal-header edit">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -68,7 +73,7 @@
 <!-- Modal de eliminacion -->
 <div id="myModal_eliminar" class="modal fade" role="dialog">
   <div class="modal-dialog">
-    <!-- Modal content-->
+    <!-- Contenido del modal-->
     <div class="modal-content">
       <div class="modal-header delet">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
