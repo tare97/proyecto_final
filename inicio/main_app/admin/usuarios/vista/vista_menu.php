@@ -27,6 +27,7 @@
         <!--Archivos propios-->
         <link rel="stylesheet" type="text/css" href="../css/estilos.css">
 	<script type="text/javascript" src="../controlador/control_usuario.js"></script>
+        <script type="text/javascript" src="../controlador/verificar_datos.js"></script>
 </head>
 <body>
     <div>
@@ -71,7 +72,7 @@
 									<label>Nombre</label>
 								</td>
 								<td>
-									<input type="text" id="nombre" class="form-control" placeholder="Introduce el Nombre">
+									<input type="text" id="nombre" class="form-control" placeholder="Introduce el Nombre (2-20 caracteres).">
 								</td>
 							</tr>
 							<tr>
@@ -79,7 +80,7 @@
 									<label>Apellido</label>
 								</td>
 								<td>
-									<input type="text" id="apellido"class="form-control" placeholder="Introduce el Apellido">
+									<input type="text" id="apellido" class="form-control" placeholder="Introduce el Apellido (2-20 caracteres).">
 								</td>
 							</tr>
 							<tr>
@@ -87,7 +88,7 @@
 									<label>correo</label>
 								</td>
 								<td>
-									<input type="email" id="correo"class="form-control" placeholder="Introduce el Correo">
+									<input type="email" id="correo" class="form-control" placeholder="Introduce el Correo (Ejemplo: usuario@hotmail.com.">
 								</td>
 							</tr>
 							<tr>
@@ -95,7 +96,7 @@
 									<label>usuario</label>
 								</td>
 								<td>
-									<input type="text" id="usuario"class="form-control" placeholder="Introduce el Usuario">
+									<input type="text" id="usuario" class="form-control" placeholder="Introduce el Usuario (2-15 caracteres).">
 								</td>
 							</tr>
 							<tr>
@@ -103,7 +104,7 @@
 									<label>contraseña</label>
 								</td>
 								<td>
-									<input type="password" id="clave" class="form-control" placeholder="Introduce la Contraseña">
+									<input type="password" id="clave" class="form-control" placeholder="Introduce la Contraseña (Min 6 caracteres - max 20).">
 								</td>
 							</tr>
 							<tr>

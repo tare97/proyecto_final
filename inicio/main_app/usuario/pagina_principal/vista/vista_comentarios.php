@@ -9,6 +9,6 @@ $id_publicacion = $_POST['id_publicacion'];
 <br>
 <input type="hidden" id="id_publicacion" value="<?php echo $id_publicacion; ?>"></input>
 <label for="texto">Comentario</label>
-<textarea name="comentario" id="mas_comentario" placeholder="* Escriba su comentario aquí... " required></textarea>
+<textarea name="comentario" id="mas_comentario" placeholder="* Escriba su comentario aquí... " required maxlength="60"></textarea>
 <button class="btn btn-info btn-md" onclick="btn_listar_comentarios(<?php echo $id_publicacion; ?>);"> comentarios </button>
 

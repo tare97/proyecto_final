@@ -108,6 +108,7 @@ function rclavev(){
     }
 }
 
+/* CAPTCHA */
 function rcaptcha(){
     const captcha = document.getElementById("confirmacion").value;
     if (captcha.length < 1) {

@@ -10,12 +10,12 @@
 
 CREATE TABLE `usuarios` (
   `id_usuario` int(11) PRIMARY KEY AUTO_INCREMENT,
-  `usuario` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `apellido` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `tipo_usuario` varchar(20) COLLATE utf8_unicode_ci NOT NULL
+  `usuario` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `nombre` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `apellido` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `tipo_usuario` varchar(10) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -39,10 +39,10 @@ WHERE `nombre`='administrador';
 CREATE TABLE `publicaciones` (
   `id_publicacion` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `id_usuario` int(11) COLLATE utf8_unicode_ci NOT NULL,
-  `titulo` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
-  `imagen` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `tipo_publicacion` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
-  `texto` varchar(10000) COLLATE utf8_unicode_ci NOT NULL,
+  `titulo` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `imagen` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `tipo_publicacion` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `texto` varchar(635) COLLATE utf8_unicode_ci NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 

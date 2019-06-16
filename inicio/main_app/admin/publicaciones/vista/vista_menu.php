@@ -28,6 +28,7 @@
 	<script type="text/javascript" src="../librerias/bootstrap/js/bootstrap.min.js"></script>
         <!--Archivos propios-->
 	<script type="text/javascript" src="../controlador/control_publicaciones.js"></script>
+        <script type="text/javascript" src="../controlador/verificar_datos.js"></script>
         <script src="../controlador/contarCaracteres.js"></script>
 </head> 
 <body>
@@ -68,7 +69,7 @@
                                             <label>Titulo</label>
 					</td>
 					<td>
-                                            <input type="text" id="titulo" class="form-control" name="txtnom" placeholder="Introduce el titulo deseado" value="">
+                                            <input type="text" id="titulo" class="form-control" name="txtnom" placeholder="Introduce el titulo deseado" value="" maxlength="60">
                                         </td>
                                     </tr>
                                     <tr>

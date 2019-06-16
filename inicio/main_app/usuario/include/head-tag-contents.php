@@ -39,6 +39,7 @@
         <link rel="stylesheet" type="text/css" href="../usuario/css/styles.css">
         <!--Pagina principal , enlaces necesarios para eliminar y editar datos-->
         <script src="../usuario/pagina_principal/controlador/controlador_public.js"></script>
+        <script src="../usuario/pagina_principal/controlador/verificar_datos.js"></script>
         <!--Enlace script para el contador de caracteres-->
         <script src="../usuario/nuevasPublicaciones/contarCaracteres.js"></script>
         <!--Los archivos necearios para el slider-->
