@@ -150,7 +150,7 @@ function btn_listar_comentarios(id_publicacion){
         var ob = {id_publicacion:id_publicacion};
 	$.ajax({
 		type: "POST",
-		url:"pagina_principal/modelo/modelo_listar_datos.php",
+		url:"pagina_principal/modelo/modelo_listar_comentarios.php",
 		data: ob,
 		beforeSend: function(objeto){
 
@@ -161,10 +161,30 @@ function btn_listar_comentarios(id_publicacion){
 	});
 }
 
-//Dinamismo de los likes
-//function cargarLike(){
-    //document.getElementById('recarga_like_si').innerHTML = "<a href=\"#\" onclick=\"darLike(<?php echo $res['id_publicacion']; ?>);\"><img src=\"css/corazon_desactivo.png\"></a>";
-//}
+//Eliminar comentario.
+function btn_eliminar_coment(id_comentario){
+        var ob = {id_comentario:id_comentario};
+	$.ajax({
+		type: "POST",
+		url:"pagina_principal/modelo/modelo_eliminar_comentario.php",
+		data: ob,
+		beforeSend: function(objeto){
+
+		},
+		success: function(data){
+                        /* recarga la pagína dinamicamente */
+                        var id_publicacion = $("#id_publicacion").val();
+			btn_listar_comentarios(id_publicacion);
+                         
+                        /* mensaje de error */ 
+                        $("#panel_respuesta_comentario").html(data);
+                        setTimeout(function(){
+                            $("#panel_respuesta_comentario").html("");
+                        },2500);
+		}
+	});
+}
+
 
 
 //CONTROLES PARA LOS LIKES.

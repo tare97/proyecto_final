@@ -38,6 +38,7 @@ function btn_editar_dato(id_usuario){
             
             setTimeout(function(){
                 $("#panel_cambio_usuario").html("");
+                btn_editar(id_usuario);
             },2500);
         }
     });

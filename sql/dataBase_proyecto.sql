@@ -57,7 +57,7 @@ CREATE TABLE `comentar` (
   `id_comentario` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `id_publicacion` int(11) COLLATE utf8_unicode_ci NOT NULL,
   `id_usuario` int(11) COLLATE utf8_unicode_ci NOT NULL,
-  `comentario` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `comentario` varchar(65) COLLATE utf8_unicode_ci NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 

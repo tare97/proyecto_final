@@ -9,7 +9,7 @@
 		<?php include('include/navigation.php'); ?>
 		<div class="main-content">	
                     <!--Breadcrumb-->
-                    <div class="migaDePan">Nuevas Publicaciones.</div>
+                    <div class="migaDePan"><span class="glyphicon glyphicon-edit"></span> Nuevas Publicaciones.</div>
                     <form id="registro-public" action="nuevasPublicaciones/valida_foto.php" method="POST" enctype="multipart/form-data">
                         <h2>REGÍSTRO DE PUBLICACIÓN</h2>
                         <input type="text" name="txtnom" placeholder="Introduce el titulo deseado (max - 60 Caracteres.)" value="" maxlength="60">

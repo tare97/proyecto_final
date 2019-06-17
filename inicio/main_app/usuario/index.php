@@ -14,7 +14,7 @@
             <!--Cuerpo de la pagína-->
             <div  class="main-content">
                 <!--Breadcrumb-->
-                <div class="migaDePan">Home > Publicaciones.</div>
+                <div class="migaDePan"><span class="glyphicon glyphicon-home"></span> Home > <span class="glyphicon glyphicon-th-list"></span> Publicaciones.</div>
                 <!--Codificación para la aparición en bucle de las publicaciones-->
                 <?php
                 require_once 'conexion.php';
@@ -66,12 +66,11 @@
                                         if ($res3['id_publicacion'] == $id_publicacion) {
                                         ?>
                                         <!--Likes-->
-                                        <!--<div id="recarga_like_no"></div>-->
                                         <a href="#" onclick="quitarLike(<?php echo $res3['id_puntuacion']; ?>);"><img src="css/corazon_activo.png"></a>
                                         <?php
                                         }
                                     }
-                                //De lo contrario mostrara el boton vacio.
+                                //De lo contrario mostrara el corazon vacio.
                                 } else {
                                     ?>
                                         <a href="#" onclick="darLike(<?php echo $res['id_publicacion']; ?>);"><img src="css/corazon_desactivo.png"></a>
@@ -90,8 +89,8 @@
                                 ?>
                                     <!--Botones para borrar o editar-->
                                     <div class="col-xs-6 tools">
-                                        <button class="btn btn-danger" data-toggle="modal" data-target="#myModal_eliminar" onclick="btn_eliminar('<?php echo $res['id_publicacion']; ?>');">Eliminar</button>
-                                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal_editar"onclick="btn_editar('<?php echo $res['id_publicacion']; ?>');">Editar</button>
+                                        <button class="btn btn-danger" data-toggle="modal" data-target="#myModal_eliminar" onclick="btn_eliminar('<?php echo $res['id_publicacion']; ?>');"><span class="glyphicon glyphicon-trash"></span> Eliminar</button>
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal_editar"onclick="btn_editar('<?php echo $res['id_publicacion']; ?>');"><span class="glyphicon glyphicon-edit"></span> Editar</button>
                                     </div>
                                 <?php
                                 // y si tiene la pubicación es de tipo compra podras comprarlo de
@@ -100,7 +99,7 @@
                                 ?>
                                     <!--Botones para comprar-->
                                     <div class="col-xs-6 shop">
-                                        <button class="btn btn-success" data-toggle="modal" data-target="#myModal_compra" onclick="btn_compra('<?php echo $res['id_publicacion']; ?>');">Comprar</button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#myModal_compra" onclick="btn_compra('<?php echo $res['id_publicacion']; ?>');"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</button>
                                     </div>
                                 <?php        
                                 }
@@ -118,11 +117,11 @@
                             <div class="modal-content">
                                 <div class="modal-header cabe-coment">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Panel de comentarios</h4>
+                                    <h4 class="modal-title"><span class="glyphicon glyphicon-comment"></span> Panel de comentarios</h4>
                                 </div>
                                 <div class="modal-body">
                                     <div id="panel_comentario"></div>
-                                    <button type="button" class="btn btn-info comentario" onclick ="btn_camentario_dato();">Añadir</button>
+                                    <button type="button" class="btn btn-info comentario" onclick ="btn_camentario_dato();"><span class="glyphicon glyphicon-share"></span> Añadir</button>
                                     <div id="panel_respuesta_comentario"></div>
                                     <div id="panel_listado" class="">
                                         <!--Panel de los comentarios a listar-->
@@ -130,7 +129,7 @@
                                 </div>
                                 <div class="modal-footer fot-coment">
                                     
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -142,15 +141,15 @@
                             <div class="modal-content">
                                 <div class="modal-header delet">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title"> Panel de eliminar. </h4>
+                                    <h4 class="modal-title"><span class="glyphicon glyphicon-trash"></span> Panel de eliminar. </h4>
                                 </div>
                                 <div class="modal-body">
                                     <div id="panel_eliminar"></div>
                                 </div>
                                 <!--Pie de pagína del modelo-->
                                 <div class="modal-footer delet">
-                                    <button type="button" class="btn btn-info" onclick ="btn_eliminar_dato();">Eliminar</button>
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-danger" onclick ="btn_eliminar_dato();">Eliminar</button>
+                                    <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +161,7 @@
                             <div class="modal-content">
                                 <div class="modal-header edit">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title"> Panel de edición de la publicación. </h4>
+                                    <h4 class="modal-title"><span class="glyphicon glyphicon-edit"></span> Panel de edición de la publicación. </h4>
                                 </div>
                                 <div class="modal-body">
                                     <div id="panel_editar"></div>

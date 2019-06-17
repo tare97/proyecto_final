@@ -39,9 +39,11 @@
         <link rel="stylesheet" type="text/css" href="../usuario/css/styles.css">
         <!--Pagina principal , enlaces necesarios para eliminar y editar datos-->
         <script src="../usuario/pagina_principal/controlador/controlador_public.js"></script>
-        <script src="../usuario/pagina_principal/controlador/verificar_datos.js"></script>
         <!--Enlace script para el contador de caracteres-->
+            <!--Cuando crea una nuva publicacion-->
         <script src="../usuario/nuevasPublicaciones/contarCaracteres.js"></script>
+            <!--Cuando creas un nuevo comentario-->
+        <script src="../usuario/pagina_principal/controlador/contarComentarios.js"></script>
         <!--Los archivos necearios para el slider-->
         <link rel="stylesheet" href="../usuario/css/my-slider.css"/>
         <script src="../usuario/js/ism-2.2.min.js"></script>

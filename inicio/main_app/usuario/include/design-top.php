@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand menu-bar" href="#">EnjoyArt Application</a>
+        <a class="navbar-brand menu-bar" href="#">EnjoyArt Application</a>
       <!--Enlace del escript para su correcto funcionamiento-->
       <script src="../usuario/js/abrir.js"></script>
     </div>

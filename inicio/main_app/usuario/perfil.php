@@ -12,7 +12,7 @@
             <!--Cuerpo de la pagína-->
             <div class="main-content">
                 <!--Breadcrumb-->
-                <div class="migaDePan">Perfíl > Mis Publicaciones.</div>
+                <div class="migaDePan"><span class="glyphicon glyphicon-user"></span> Perfíl > <span class="glyphicon glyphicon-eye-open"></span> Mis Publicaciones.</div>
                 <!--Slider para la parte superior de l a pagína de perfil-->
                 <div class='slider'>
                     <div class="ism-slider" data-transition_type="fade" data-play_type="loop" id="my-slider">
@@ -68,8 +68,8 @@
                             <div class="col-xs-12">
                                 <!--Botones de eliminacion y de edicion-->
                                 <!--Nota: el base64_encode es una manera de codificar los datos-->
-                                <a class="btn btn-primary" href="perfil/vistas/roles/editar.php?id=<?=base64_encode($fila[0])?>">Editar</a>
-                                <a class="btn btn-danger" href="perfil/controladores/Roles.php?a=elim&id=<?=base64_encode($fila[0])?>" onclick="return confirm('¿Desea eliminar?')">Eliminar</a>
+                                <a class="btn btn-primary" href="perfil/vistas/roles/editar.php?id=<?=base64_encode($fila[0])?>"><span class="glyphicon glyphicon-edit"></span> Editar</a>
+                                <a class="btn btn-danger" href="perfil/controladores/Roles.php?a=elim&id=<?=base64_encode($fila[0])?>" onclick="return confirm('¿Desea eliminar?')"><span class="glyphicon glyphicon-trash"></span> Eliminar</a>
                             </div>
                         </div>
                     </div>

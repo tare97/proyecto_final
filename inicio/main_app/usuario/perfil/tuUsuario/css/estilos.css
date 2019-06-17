@@ -32,11 +32,22 @@ body #eliminar_user{
     background-color: red;
 }
 
+.panel-elim{
+    margin-top: 20px;
+}
+
 /* Barra de navegación */
 body .navbar-inverse{
     background-color: #EBA521;
     border: 1px solid #E79918;
 }
+
+body .navbar-inverse .navbar-header{
+    background-color: #0D688F;
+    border: 2px solid black;
+    padding-left: 20px;
+}
+
 
 
 /* Titulo */
